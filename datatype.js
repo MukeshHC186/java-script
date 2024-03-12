@@ -14,8 +14,8 @@ let user;
 console.log(typeof user)
 // -----------5.null---------
 let value=null;
-let b=20;
-if(b==20){
+value=20;
+if(value==25){
     user=100;
 }
 else{
