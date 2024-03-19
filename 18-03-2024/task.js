@@ -12,7 +12,7 @@ if above condition not match than print("not valid)
 */
 
 let num1=10;
-let num2=15;
+let num2=10;
 if(num1>num2){
     console.log("num1 is larger")
 }else if(num1<num2){
@@ -24,15 +24,17 @@ else{
     console.log("not valid")
 }
 
+// num1>num2?console.log("num1 is larger"):num1<num2?console.log("num1 is smaller"):num1==num2?console.log("num1 and num2 is equal"):console.log("not valid")
+
 // -----Question.2-------
 /*
 Let LightColor = "green";
 
 Write a program that simulates a traffic light. If the light is "green", print "Go".
- If it's "llow", print "Slow down".
-  If it's "e", print "Stop"
+ If it's "yellow", print "Slow down".
+  If it's "red", print "Stop"
 */
-LightColor = "green";
+LightColor = "red";
 if(LightColor=="green"){
     console.log("Go")
 }else if(LightColor=="yellow"){
@@ -40,6 +42,7 @@ if(LightColor=="green"){
 }else{
     console.log("Stop")
 }
+// LightColor=="green"?console.log("Go"):LightColor=="Yellow"?console.log("Slow down"):console.log("Stop")
 
 // -----Question.3-------
 /*
@@ -50,7 +53,7 @@ If the age is less than 18, print "Minor".
 If it's between ik ond 65, print "Adult".
  Otherwise, print "Senior"
  */
- let age=25;
+ let age=80;
  if(age<18){
     console.log("Minor")
  }else if(age>=18 && age<=65){
@@ -59,6 +62,6 @@ If it's between ik ond 65, print "Adult".
  else{
     console.log("Senior")
  }
-
+// age<18 ? console.log("minor"):(age>=18 && age<=65)? console.log("adult"):console.log("senior")
 
 
