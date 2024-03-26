@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./powder-explosion-powder-colorful-wallpaper-preview.jpg'); /* Your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .holi_animation{
+    position: relative;
+    top: 0px;
+    /* border: 2px solid; */
+    width: 95%;
+    height: 95%;
+  }
+  
+  .message {
+    position: relative;
+    width: 40%;
+    height: 70%;
+    top: 30px;
+    /* border: 2px solid red; */
+    text-align: center;
+    color: rgb(25, 49, 182);
+    font-size: xx-large;
+  }
+  h2{
+    color: rgb(37, 177, 219);
+  }
+  p{
+    color: rgb(206, 38, 164);
+  }
+  @media screen and (min-width:200px) and (max-width:768px){
+    .container-fluid{
+      position: relative;
+      top: -90px;
+      color: rgb(202, 31, 82);
+      text-align: center;
+      /* border: 2px solid; */
+    }
+    
+    .message {
+      position: relative;
+      /* border: 2px solid; */
+      width: 40%;
+      height: 70%;
+      top: 0px;
+      /* border: 2px solid red; */
+      text-align: center;
+      color: rgb(25, 49, 182);
+      font-size: xx-large;
+    }
+    h2{
+      color: rgb(99, 58, 95);
+    }
+    p{
+      color: rgb(184, 170, 50);
+    }
+  }
+  
+  
+  
