@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(60deg, rgb(120,77,251),rgb(90,149,230));
+}
+nav{
+    border: 2px solid red;
+    background: linear-gradient(70deg, rgb(120,77,251),rgb(90,149,230));
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    place-items: center;
+    position: sticky;
+    top: 0px;
+    height: 100px;
+}
+.logo{
+    border: 1px solid;
+    width: 30%;
+}
+.logo img{
+    width: 160px;
+    height: 50px;
+}
+.nav_lists{
+    border: 1px solid;
+    width: 40%;
+}
+.nav_lists ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    place-items: center;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+#shedule{
+    border-radius: 8px;
+    background-color: rgb(253,222,120);
+    padding: 20px 25px;
+    color: black;
+}
+.three_line{
+    border: 1px solid;
+    width: 30%;
+    display: none;
+}
+.main_hero{
+    display: flex;
+    padding-top: 80px;
+}
+.hero1{
+    border: 1px solid;
+    width: 45%; 
+    color: white;
+    text-align: left; 
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+.hero1 h1{
+    font-size: 60px;
+    font-family: sans-serif;
+}
+.hero1 p{
+    font-size: 21px;
+    font-family: sans-serif;
+}
+.hero2{
+    border: 1px solid;
+    width: 45%;  
+    color: white;   
+}
+.hero2 img{
+    position: absolute;
+    bottom:480px;
+}
+#img1{
+    z-index: 1;
+    top: 350px;
+}
+#img2{
+    z-index: 3;
+    right: 300px;
+    top: 280px;
+}#img3{
+    z-index: 2;
+    right: 180px;
+    top: 200px;
+}
+.main_middle1{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px;
+}
+.main_middle1_heading{
+    color: rgb(238,240,246);
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+.wave-container {
+    position: relative;
+    width: 200px; /* adjust width as needed */
+    height: 100px; /* adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #007bff; /* Adjust background color */
+    border-top-left-radius: 50% 20px;
+    border-top-right-radius: 50% 20px;
+  }
+  
+  .wave:before,
+  .wave:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: inherit;
+  }
+  
+  .wave:before {
+    top: -20px;
+    left: -50%;
+    border-top-left-radius: 100% 80px;
+  }
+  
+  .wave:after {
+    top: -20px;
+    right: -50%;
+    border-top-right-radius: 100% 80px;
+  }
+  
