@@ -5,7 +5,7 @@ body{
     background: linear-gradient(60deg, rgb(120,77,251),rgb(90,149,230));
 }
 nav{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     background: linear-gradient(70deg, rgb(120,77,251),rgb(90,149,230));
     color: white;
     display: flex;
@@ -15,9 +15,11 @@ nav{
     position: sticky;
     top: 0px;
     height: 100px;
+    overflow: hidden;
+    z-index: 4;
 }
 .logo{
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 30%;
 }
 .logo img{
@@ -25,7 +27,7 @@ nav{
     height: 50px;
 }
 .nav_lists{
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 40%;
 }
 .nav_lists ul{
@@ -43,7 +45,7 @@ nav{
     color: black;
 }
 .three_line{
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 30%;
     display: none;
 }
@@ -52,7 +54,7 @@ nav{
     padding-top: 80px;
 }
 .hero1{
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 45%; 
     color: white;
     text-align: left; 
@@ -69,7 +71,7 @@ nav{
     font-family: sans-serif;
 }
 .hero2{
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 45%;  
     color: white;   
 }
@@ -83,19 +85,75 @@ nav{
 }
 #img2{
     z-index: 3;
-    right: 300px;
+    right: 100px;
     top: 280px;
 }#img3{
     z-index: 2;
-    right: 180px;
+    right: 40px;
     top: 200px;
 }
 .main_middle1{
     display: flex;
     flex-direction: column;
     padding: 40px 0px;
+    gap: 50px;
+    background: linear-gradient(70deg, rgb(142,106,252),rgb(115,163,234));
+margin-top: 80px;
 }
 .main_middle1_heading{
     color: rgb(238,240,246);
     text-align: center;
+}
+.main_middle1_image img{
+    width: 110px;
+}
+.main_middle1_image{
+    display: flex;
+    justify-content: space-evenly;
+}
+.middle2{
+    background-color: rgb(255,255,255);
+    font-family: sans-serif;
+    padding: 10px;
+    display: flex;
+}
+.middle2_content h2{
+    font-size: 50px;
+    margin-left: 150px;
+}
+.middle2_image{
+    display: grid;
+    place-items: center;
+}
+pre{
+    font-size: 20px;
+    /* margin-left: 50px; */
+    color: rgb(83,88,97);
+    margin-left: 30px;
+}
+.middle3{
+    background-color: rgb(190,227,239);
+    padding: 150px 30px;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* height: 200px; */
+    gap: 15px;
+}
+.middle3_cards{
+    height: 270px;
+    border-radius: 30px 5px;
+    background-color:rgb(255,255,255) ;
+    padding: 32px 28px;
+    display: grid;
+    place-items: center;
+}
+.middle3_cards_content{
+    font-family: sans-serif;
+}
+.middle3_cards_content h4{
+    font-size: 20px;
+}
+.middle3_cards_content p{
+    font-size: 13px;
 }
