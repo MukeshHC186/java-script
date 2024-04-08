@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(60deg, rgb(120,77,251),rgb(90,149,230));
+    /* background: linear-gradient(60deg, rgb(120,77,251),rgb(90,149,230)); */
 }
 nav{
     /* border: 2px solid red; */
@@ -35,7 +35,7 @@ nav{
     justify-content: space-around;
     list-style: none;
     place-items: center;
-    font-size: 18px;
+    font-size: 15px;
     font-family: sans-serif;
 }
 #shedule{
@@ -44,6 +44,10 @@ nav{
     padding: 20px 25px;
     color: black;
 }
+#shedule:hover{
+    color: rgba(0, 0, 255, 0.562);
+    background-color: white;
+}
 .three_line{
     /* border: 1px solid; */
     width: 30%;
@@ -51,7 +55,8 @@ nav{
 }
 .main_hero{
     display: flex;
-    padding-top: 80px;
+    padding: 80px;
+    background: linear-gradient(70deg, rgb(120,77,251),rgb(90,149,230));
 }
 .hero1{
     /* border: 1px solid; */
@@ -98,7 +103,7 @@ nav{
     padding: 40px 0px;
     gap: 50px;
     background: linear-gradient(70deg, rgb(142,106,252),rgb(115,163,234));
-margin-top: 80px;
+/* margin-top: 80px; */
 }
 .main_middle1_heading{
     color: rgb(238,240,246);
@@ -132,7 +137,13 @@ pre{
     margin-left: 30px;
 }
 .middle3{
-    background-color: rgb(190,227,239);
+    /* background-color: rgb(190,227,239); */
+    background-image: url("https://uploads-ssl.webflow.com/62544419c4e0791a8e585c60/628400f74b189b1673967b1e_Rectangle%203532.svg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 0;
     padding: 150px 30px;
     width: 95%;
     display: grid;
