@@ -80,20 +80,41 @@
 //     i++
 // }
 // console.log(sum)
-let arr=[1,6,2,10,2,4]
+// let arr=[1,6,2,10,2,4]
+// let i=0;
+// let count=0;
+// let sum=0;
+// // let ave;
+// while(i<arr.length){
+//     if(arr[i]%2==0){
+//         count++
+//         sum=sum+arr[i]
+//     }
+//     i++
+// }
+// let ave=sum/count
+// console.log(count);
+// console.log(sum);
+// console.log(ave)
+let arr=[1,4,6,7,9,10,12]
 let i=0;
-let count=0;
-let sum=0;
+let evensum=0;
+let oddsum=0;
+let sum;
 let ave;
+let count;
 while(i<arr.length){
     if(arr[i]%2==0){
-        count++
-        sum=sum+arr[i]
+        evensum=evensum+arr[i]
+    }else{
+        oddsum=oddsum+arr[i]
     }
     i++
 }
-console.log(count);
-console.log(sum);
-console.log(ave=sum/count)
+console.log(evensum)
+console.log(oddsum)
+console.log(sum=(evensum+oddsum))
+console.log(ave=(sum/arr.length))
+
 
 
