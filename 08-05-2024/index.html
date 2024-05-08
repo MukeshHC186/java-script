@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="head"></div>
+  </body>
+  <script>
+    let table = document.createElement("table");
+    let thead = document.createElement("thead");
+    let tr = document.createElement("tr");
+    let th = document.createElement("th");
+    th.innerText = "S.No.";
+    let th1 = document.createElement("th");
+    th1.innerText = "Name";
+    let th2 = document.createElement("th");
+    th2.innerText = "mobile no.";
+    let th3 = document.createElement("th");
+    th3.innerText = "City";
+
+    tr.append(th, th1, th2, th3);
+    thead.append(tr);
+    table.append(thead);
+    head.append(table);
+
+    // table.style.border = "1px dotted red";
+    // table.style.backgroundColor = "cyan";
+    // table.style.width = "40%";
+    // table.style.margin = "auto";
+    // table.style.textAlign = "center";
+
+
+    let tbody = document.createElement("tbody");
+    let tr1 = document.createElement("tr");
+    let td = document.createElement("td");
+    td.innerText = "1";
+    let td1 = document.createElement("td");
+    td1.innerText = "Mukesh";
+    let td2 = document.createElement("td");
+    td2.innerText = "8441925100";
+    let td3 = document.createElement("td");
+    td3.innerText = "Jaipur";
+
+    tr1.append(td, td1, td2, td3);
+    tbody.append(tr1);
+    table.append(tbody);
+    head.append(table);
+
+    let tr2 = document.createElement("tr");
+    let td4 = document.createElement("td");
+    td4.innerText = "2";
+    let td5 = document.createElement("td");
+    td5.innerText = "Suresh";
+    let td6 = document.createElement("td");
+    td6.innerText = "9694164694";
+    let td7 = document.createElement("td");
+    td7.innerText = "Delhi";
+
+    tr2.append(td4, td5, td6, td7);
+    tbody.append(tr2);
+    table.append(tbody);
+    head.append(table);
+
+    let tr3 = document.createElement("tr");
+    let td8 = document.createElement("td");
+    td8.innerText = "3";
+    let td9 = document.createElement("td");
+    td9.innerText = "Sohan";
+    let td10 = document.createElement("td");
+    td10.innerText = "9694145612";
+    let td11 = document.createElement("td");
+    td11.innerText = "Jodhpur";
+
+    tr3.append(td8, td9, td10, td11);
+    tbody.append(tr3);
+    table.append(tbody);
+    head.append(table);
+
+    console.log(head);
+  </script>
+</html>

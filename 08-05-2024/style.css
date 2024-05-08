@@ -1,0 +1,13 @@
+table{
+    border: 1px dotted red;
+    background-color: cyan;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+tr,td,th{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 4px;
+}
