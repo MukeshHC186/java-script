@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
     <style>
-      body {
-        text-align: center;
+      
+      .heading{
+        width: 50%;
+        margin: auto;
       }
       form {
         /* border: 1px solid rgb(27, 26, 26); */
-
         width: 50%;
         margin: auto;
         background-color: #548aa34f;
@@ -18,16 +19,15 @@
         padding: 20px;
       }
       label {
-        width: 50%;
-        font-size: 20px;
-        text-align: right;
+        width: 100%;
+        font-size: 20px
       }
       input {
-        width: 50%;
+        width: 100%;
         height: 25px;
         border-radius: 5px;
         border: none;
-        margin-left: 10px;
+        /* margin-left: 10px; */
       }
       #btn {
         font-size: 15px;
@@ -52,41 +52,39 @@
         border-radius: 5px;
         margin-left: 7px;
       }
-     
     </style>
   </head>
   <body>
-    <h1>Registration Form</h1>
-
+    <div class="heading">
+      <h1>Registration Form</h1>
+    </div>
     <form id="form">
-      <div class="main_container">
-        <label for="">Name:</label><br /><input
-          type="text"
-          placeholder="Enter Your Name"
-          id="name"
-        /><br /><br />
-        <label for="">Mobile:</label><br /><input
-          type="text"
-          placeholder="Enter Your Mobile"
-          id="mobile"
-        /><br /><br />
-        <label for="">Email:</label><br /><input
-          type="text"
-          placeholder="Enter Your Email"
-          id="email"
-        /><br /><br />
-        <label for="">City:</label><br />
-        <select id="select">
-          <option value="">Select</option>
-          <option value="">Jaipur</option>
-          <option value="">Jodhpur</option>
-          <option value="">Jaislmer</option>
-          <option value="">Alwar</option></select
-        ><br /><br />
-        <label for="">Address:</label><br />
-        <textarea name="" id="address"></textarea><br /><br />
-        <button id="btn">Submit</button>
-      </div>
+      <label for="">Name:</label><br /><input
+        type="text"
+        placeholder="Enter Your Name"
+        id="name"
+      /><br /><br />
+      <label for="">Mobile:</label><br /><input
+        type="text"
+        placeholder="Enter Your Mobile"
+        id="mobile"
+      /><br /><br />
+      <label for="">Email:</label><br /><input
+        type="text"
+        placeholder="Enter Your Email"
+        id="email"
+      /><br /><br />
+      <label for="">City:</label><br />
+      <select id="select">
+        <option value="">Select</option>
+        <option value="">Jaipur</option>
+        <option value="">Jodhpur</option>
+        <option value="">Jaislmer</option>
+        <option value="">Alwar</option></select
+      ><br /><br />
+      <label for="">Address:</label><br />
+      <textarea name="" id="address"></textarea><br /><br />
+      <button id="btn">Submit</button>
     </form>
   </body>
   <script>
