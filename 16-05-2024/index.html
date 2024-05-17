@@ -5,29 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
     <style>
-      
-      .heading{
-        width: 50%;
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .heading {
+        width: 53%;
         margin: auto;
+        text-align: center;
+        background-color: #2a8dcfec;
+        color: rgb(169, 206, 68);
       }
       form {
-        /* border: 1px solid rgb(27, 26, 26); */
         width: 50%;
         margin: auto;
-        background-color: #548aa34f;
-        /* text-align: center; */
+        /* background-color: #548aa377; */
         padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       }
       label {
         width: 100%;
-        font-size: 20px
+        font-size: 20px;
+        /* font-weight: bold; */
       }
       input {
         width: 100%;
         height: 25px;
         border-radius: 5px;
-        border: none;
-        /* margin-left: 10px; */
+        /* font-weight: bold; */
       }
       #btn {
         font-size: 15px;
@@ -38,19 +46,67 @@
       }
       #btn:hover {
         background-color: #2a8dcfec;
+        color: rgb(169, 206, 68);
+        cursor: pointer;
       }
       select {
         width: 50%;
         height: 25px;
         border-radius: 5px;
-        border: none;
-        margin-left: 10px;
       }
       textarea {
         width: 50%;
         height: 70px;
         border-radius: 5px;
-        margin-left: 7px;
+      }
+      .btn {
+        text-align: center;
+      }
+      label:hover,input:hover,select:hover,textarea:hover{
+        border-color: blue;
+      }
+      @media screen and (min-width: 200px) and (max-width: 768px) {
+        .heading {
+          width: 100%;
+          margin: auto;
+        }
+        form {
+          width: 87%;
+          margin: auto;
+          padding: 20px;
+        }
+        select {
+          width: 100%;
+          height: 25px;
+          border-radius: 5px;
+        }
+        textarea {
+          width: 100%;
+          height: 70px;
+          border-radius: 5px;
+        }
+      }
+      @media screen and (min-width: 769px) and (max-width: 1080px) {
+        .heading {
+          width: 100%;
+          margin: auto;
+        }
+        form {
+          width: 100%;
+          margin: auto;
+          padding: 20px;
+        }
+        select {
+          width: 100%;
+          height: 25px;
+          border-radius: 5px;
+          border: none;
+        }
+        textarea {
+          width: 100%;
+          height: 70px;
+          border-radius: 5px;
+        }
       }
     </style>
   </head>
@@ -74,17 +130,21 @@
         placeholder="Enter Your Email"
         id="email"
       /><br /><br />
-      <label for="">City:</label><br />
-      <select id="select">
-        <option value="">Select</option>
-        <option value="">Jaipur</option>
-        <option value="">Jodhpur</option>
-        <option value="">Jaislmer</option>
-        <option value="">Alwar</option></select
+      <label for=""
+        >City:<br />
+        <select id="select">
+          <option>Select</option>
+          <option>Jaipur</option>
+          <option>Jodhpur</option>
+          <option>Jaislmer</option>
+          <option>Alwar</option>
+        </select></label
       ><br /><br />
       <label for="">Address:</label><br />
       <textarea name="" id="address"></textarea><br /><br />
-      <button id="btn">Submit</button>
+      <div class="btn">
+        <button id="btn">Submit</button>
+      </div>
     </form>
   </body>
   <script>
