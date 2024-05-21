@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form2</title>
+</head>
+<style>
+    form {
+      width: 40%;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+<body>
+    
+</body>
+<script>
+    let form=document.createElement("form")
+    form.id="form"
+    let div=document.createElement("div")
+    div.id="main_container"
+    
+    let labelname=document.createElement("label")
+    labelname.innerText="Name:-"
+    let inputname=document.createElement("input")
+    inputname.setAttribute=("type","Text")
+    inputname.placeholder="Enter Your Name"
+    let br=document.createElement("br")
+    let br3=document.createElement("br")
+
+    let labelmobile=document.createElement("label")
+    labelmobile.innerText="Mobile:-"
+    let inputmobile=document.createElement("input")
+    inputmobile.setAttribute=("type","text")
+    inputmobile.placeholder="Enter Your Mobile Number"
+    let br2=document.createElement("br")
+    let br4=document.createElement("br")
+    
+    let btn=document.createElement("button")
+    btn.id="btn"
+    btn.innerText="Submit"
+    btn.addEventListener("click",getValue)
+    let arr=JSON.parse(localStorage.getItem("userData"))||[]
+    function getValue(eve){
+        eve.preventDefault()
+        let obj={
+            name:inputname.value,
+            mobile:inputmobile.value
+        }
+        arr.push(obj)
+        console.log(arr)
+        form.reset()
+    }
+
+    div.append(labelname,inputname,br,br3,labelmobile,inputmobile,br2,br4,btn)
+    form.append(div)
+    document.body.append(form)
+    // console.log(div);
+    localStorage.setItem("userData",JSON.stringify(arr))
+</script>
+</html>

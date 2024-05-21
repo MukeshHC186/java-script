@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 40%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+        text-align: center;
+        border: 2px solid rgb(0, 140, 255);
+      }
+      #child_container{
+        width: 40%;
+        margin: 20px auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+        text-align: center;
+        border: 2px solid rgb(182, 25, 59);
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_container">
+      <form id="form">
+        Name:- <input type="text" id="name" /><br /><br />
+        Mobile:- <input type="text" id="mobile" />
+        <button id="btn">Submit</button>
+      </form>
+    </div>
+    <div id="child_container"></div>
+  </body>
+  <script>
+    let arr = JSON.parse(localStorage.getItem("userData")) || [];
+    let main = document.getElementById("main_container");
+    let form = document.getElementById("form");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", getValue);
+    function getValue(eve) {
+      eve.preventDefault();
+      let obj = {
+        name: document.getElementById("name").value,
+        mobile: document.getElementById("mobile").value,
+      };
+      arr.push(obj);
+      localStorage.setItem("userData", JSON.stringify(arr));
+
+      console.log(arr);
+      form.reset();
+    }
+    document.body.append(form);
+    main.append(form);
+    form.append(name, mobile, btn);
+
+    function displayData(data) {
+      data.forEach((ele) => {
+        let child = document.getElementById("child_container");
+        let h3 = document.createElement("h3");
+        h3.innerText = ele.name;
+        let p = document.createElement("p");
+        p.innerText = ele.mobile;
+        child_container.append(h3,p);
+      });
+    }
+    displayData(arr);
+  </script>
+</html>
