@@ -5,29 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form</title>
     <style>
+      #main{
+        border: 2px solid red;
+      }
       form {
         width: 40%;
         margin: auto;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         padding: 20px;
         text-align: center;
+        border: 2px solid rgb(0, 140, 255);
+
       }
+      #cont{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border: 2px solid rgb(133, 173, 40);
+
+      }
+      
     </style>
   </head>
   <body>
+   <div id="main">
     <form action="" id="form">
       <label for="">Name:-</label>
-      <input type="text" id="name" placeholder="Enter Your Name" /><br /><br />
+      <input type="text" id="name" placeholder="Enter Your Name" /><br><br>
       <label for="">Mobile:-</label>
-      <input type="text" id="mobile" placeholder="Enter Your Name"/><br /><br />
+      <input type="text" id="mobile" placeholder="Enter Your Name"/>
       <button id="btn">Submit</button>
-    </form>
+    </form></div>
+    <div id ="cont">
+      
+    </div>
   </body>
   <script>
-    let arr = [];
+    let arr = JSON.parse(localStorage.getItem("userData"))||[];
+    // console.log(arr,"28");
     let form = document.getElementById("form");
     let btn = document.getElementById("btn");
+    let main =document.getElementById("main")
+    
     btn.addEventListener("click", getValue);
+
     function getValue(eve) {
       eve.preventDefault();
       let obj = {
@@ -35,10 +55,32 @@
         mobile: document.getElementById("mobile").value,
       };
       arr.push(obj);
-      console.log(arr);
+      localStorage.setItem("userData",JSON.stringify(arr))
+      
+      // console.log(arr);
       form.reset();
     }
-    body.append(form);
+
+    document.body.append(form);
     form.append(name, mobile, btn);
+    main.append(form)
+
+    
+    let cont =document.getElementById("cont")
+    
+
+    function displayData(data){
+         data.forEach((ele)=>{
+          let div=document.createElement("div")
+          let h4=document.createElement("h4")
+          h4.innerText=ele.name
+          let p=document.createElement("p")
+          p.innerText=ele.mobile
+          div.append(h4,p)
+          cont.append(div)
+         
+    });
+  }
+    displayData(arr)
   </script>
 </html>
