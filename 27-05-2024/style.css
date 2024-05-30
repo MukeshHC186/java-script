@@ -171,7 +171,7 @@ background-color: rgba(180, 179, 129, 0.356);
 }
 table,td,th{
   border: 1px solid gray;
-  padding: 5px;
+  padding: 8px;
   /* border-radius: 5px; */
   margin: auto;
   border-collapse: collapse;
