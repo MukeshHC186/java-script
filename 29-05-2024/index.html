@@ -92,13 +92,13 @@
         let td5=document.createElement("td")
         td5.innerText=ele.message
 
-        // let btn=document.createElement("button")
-        // btn.innerText="Add"
-        // btn.addEventListener("click",()=>{
-        //      addtocart("favdata",ele)
-        // })
+        let btn=document.createElement("button")
+        btn.innerText="Add"
+        btn.addEventListener("click",()=>{
+             addtocart("cart",ele)
+        })
 
-        tr.append(td1,td2,td3,td4,td5)
+        tr.append(td1,td2,td3,td4,td5,btn)
         tbody.append(tr)
         table.append(tbody)
         table_container.append(table)
@@ -107,12 +107,12 @@
     displayData(arr)
 
     // -------------add to cart--------------
-    // function addtocart(key,value){
-    //     let cart=JSON.parse(localStorage.getItem("favdata"))||[]
-    //  cart.push(value)
-    //  localStorage.setItem("cart",JSON.stringify(value))
-    // alert("add to cart")
+    function addtocart(key,value){
+        let cart=JSON.parse(localStorage.getItem("cart"))||[]
+     cart.push(value)
+     localStorage.setItem("cart",JSON.stringify(value))
+    alert("add to cart")
 
-    // }
+    }
 </script>
 </html>
