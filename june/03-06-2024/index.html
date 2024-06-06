@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="nav_container">
+      <div id="logo">
+        <img
+          src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/design/discover/mascot-logo-design/mascot-logo-design_fb-img_1200x800.jpg"
+          alt=""
+        />
+      </div>
+
+      <div id="nav_links">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Email</li>
+          <li>Service</li>
+        </ul>
+      </div>
+      <div id="three_line">&#9776;</div>
+    </div>
+    <div id="hero_section">
+      <img
+        src="https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+    </div>
+    <div id="middle_container">
+      <div id="form_div">
+        <h2>Registeation Form</h2>
+        <form action="" id="form">
+          Name: <br />
+          <input type="text" id="name" required /><br /><br />
+          Mobile: <br />
+          <input type="text" id="mobile" required /><br /><br />
+          <input type="submit" id="submit" />
+        </form>
+      </div>
+      <div id="display"></div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <h4>About Us</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h4>Follow Us</h4>
+              <ul>
+                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h4>Subscribe to Newsletter</h4>
+              <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 All Rights Reserved. <br>Designed By Mukesh Kumar</p>
+        </div>
+      </footer>
+  </body>
+  <script>
+    let arr = JSON.parse(localStorage.getItem("user")) || [];
+    let form = document.getElementById("form");
+    let submit = document.getElementById("submit");
+    let display = document.getElementById("display");
+    submit.addEventListener("click", userData);
+    function userData(e) {
+      e.preventDefault();
+
+      let obj = {
+        name: document.getElementById("name").value,
+        mobile: document.getElementById("mobile").value,
+      };
+      arr.push(obj);
+      localStorage.setItem("user", JSON.stringify(arr));
+      displayData(arr)
+      form.reset();
+    }
+
+    function displayData(data){
+      display.innerHTML=null
+      let table=document.createElement("table")
+      let thead=document.createElement("thead") 
+      let tbody=document.createElement("tbody")
+      let tr=document.createElement("tr")
+      let th1=document.createElement("th")
+      th1.innerText="Sr.No."
+      let th2=document.createElement("th")
+      th2.innerText="Name"
+      let th3=document.createElement("th")
+      th3.innerText="Mobile"
+      tr.append(th1,th2,th3)
+      thead.append(tr)
+      table.append(thead)
+
+      data.forEach((ele,index)=>{
+        index++
+        let tr=document.createElement("tr")
+        let td1=document.createElement("td")
+        td1.innerText=index
+        let td2=document.createElement("td")
+        td2.innerText=ele.name
+        let td3=document.createElement("td")
+        td3.innerText=ele.mobile
+        tr.append(td1,td2,td3)
+        tbody.append(tr)
+        table.append(tbody)
+        display.append(table)
+      })
+    }
+    displayData(arr)
+  </script>
+</html>

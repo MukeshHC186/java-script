@@ -10,7 +10,7 @@ body {
     /* display: flex; */
     /* justify-content: center; */
     align-items: center;
-    height: auto;
+    /* height: auto; */
 }
 .main_container{
     background-color: #fff;
