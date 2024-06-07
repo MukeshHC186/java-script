@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navbar {
+        background-color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+      .three_line {
+        width: 3%;
+        margin: 0 0 0 20px;
+        font-weight: bold;
+        font-size: x-large;
+        color: white;
+        text-align: center;
+        display: none;
+      }
+      .logo {
+        width: 20%;
+      }
+      .logo img {
+        width: 100px;
+        height: 70px;
+        border-radius: 50%;
+        margin: auto;
+      }
+      .nav_links {
+        width: 40%;
+      }
+      .nav_links ul {
+        display: flex;
+        justify-content: space-between;
+        color: wheat;
+        font-size: 18px;
+        list-style: none;
+      }
+      .nav_links ul li {
+        margin: 1rem 2rem;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+      }
+      .nav_links ul li:hover {
+        background-color: #348fccd7;
+        cursor: pointer;
+      }
+      .hero_section {
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+      }
+      .hero_section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        color: rgb(66, 46, 177);
+      }
+      .main_container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem 5rem;
+      }
+      .form_container {
+        width: 40%;
+        padding: 2rem 5rem;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+      .form_container form input,
+      .form_container form select {
+        width: 100%;
+        height: 28px;
+        margin-bottom: 15px;
+      }
+      #btn {
+        background-color: #407da7;
+        color: white;
+        text-align: center;
+        width: 30%;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+      }
+      #btn:hover {
+        background-color: #053c61;
+        cursor: pointer;
+      }
+
+      .displar_data {
+        padding: 2rem 5rem;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+
+      table {
+        width: 100%;
+      }
+      thead {
+        background-color: #407da7;
+        color: white;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #3a3c3dd7;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      #main_footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+        color: white;
+      }
+      .follow_us {
+        width: 30%;
+      }
+      .follow_us ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      ul li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      @media screen and (max-width: 768px) {
+        .three_line {
+          width: 10%;
+          display: block;
+        }
+        .logo {
+          width: 25%;
+        }
+        .logo img {
+          display: grid;
+          place-items: center;
+          width: 80%;
+          height: 60%;
+        }
+        .nav_links {
+          display: none;
+        }
+        .hero_section {
+        height: 100%;
+      }
+      h1{
+        font-size: 30px;
+      }
+      .hero_section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+        .main_container {
+            padding: 0;
+            margin: 0;
+          display: block;
+        }
+        .form_container {
+          width: 100%;
+          padding: 10px;
+        }
+        .form_container form{
+            width: 100%;
+
+        }
+        .form_container form input,
+      .form_container form select {
+        width: 100%;
+      }
+      .displar_data {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 5px;
+      }
+      td,th,table,thead,tbody,tr{
+        display: block;
+        padding: 10px;
+      }
+      tr{
+        margin-bottom: 20px;
+      }
+      table th,table td{
+        width: 100%;
+        margin: auto;
+      }
+     
+        .main_footer {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="three_line">&#9776;</div>
+      <div class="logo">
+        <img
+          src="https://t3.ftcdn.net/jpg/00/85/73/28/360_F_85732813_H42V97IazS9xQNfMPYrbk1fgQcg9l8rs.jpg"
+          alt=""
+        />
+      </div>
+      <div class="nav_links">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Service</li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero_section">
+      <h1>Student Admission Form</h1>
+      <img
+        src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+    </div>
+    <div class="main_container">
+      <div class="form_container">
+        <form action="" id="form">
+          Name:- <input type="text" placeholder="Name" id="name" /><br />
+          Email:- <input type="email" placeholder="Email" id="email" /><br />
+          Course:-
+          <select name="" id="course">
+            <option>select</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JAVA</option>
+          </select>
+          <input type="submit" id="btn" />
+        </form>
+      </div>
+      <div class="displar_data">
+        <table>
+          <thead>
+            <tr>
+              <th>Sr.No.</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Course</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <footer id="main_footer">
+        <div class="about">
+          <h3>About Us</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
+            fugiat expedita quis assumenda adipisci amet ex sunt dolorum
+            deserunt alias!
+          </p>
+        </div>
+        <div class="links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+        <div class="follow_us">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">Youtube</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    let arr = JSON.parse(localStorage.getItem("user")) || [];
+    function userDetails(e) {
+      e.preventDefault();
+      let obj = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        course: document.getElementById("course").value,
+      };
+      arr.push(obj);
+      localStorage.setItem("user", JSON.stringify(arr));
+      displayData(arr);
+      form.reset();
+    }
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", userDetails);
+
+    let tbody = document.getElementById("tbody");
+    function displayData(data) {
+      tbody.innerHTML = "";
+      data.map((ele, index) => {
+        index++;
+        let tr = document.createElement("tr");
+        let td = document.createElement("td");
+        td.innerText = index;
+        let td1 = document.createElement("td");
+        td1.innerText = ele.name;
+        let td2 = document.createElement("td");
+        td2.innerText = ele.email;
+        let td3 = document.createElement("td");
+        td3.innerText = ele.course;
+        tr.append(td, td1, td2, td3);
+        tbody.append(tr);
+      });
+    }
+    displayData(arr);
+  </script>
+</html>
