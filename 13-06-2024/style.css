@@ -179,14 +179,14 @@
   }
   #addbtn{
     padding: 4px 10px;
-    background-color: rgb(44, 187, 44);
+    background-color: rgb(10, 107, 10);
     color: white;
     border: none;
     border-radius: 5px;
   }
   #delbtn{
     padding: 4px 10px;
-    background-color: rgb(194, 37, 37);
+    background-color: rgb(95, 8, 8);
     color: white;
     border: none;
     border-radius: 5px;
@@ -194,7 +194,7 @@
   }
   #editbtn{
     padding: 4px 10px;
-    background-color: rgb(35, 54, 224);
+    background-color: rgb(13, 20, 78);
     color: white;
     border: none;
     border-radius: 5px;
