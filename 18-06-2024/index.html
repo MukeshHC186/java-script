@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .main_container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        /* margin: auto; */
+        /* max-width: 400px; */
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+      }
+      .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 40%;
+        max-width: 400px;
+      }
+      .display {
+        width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+      }
+      table,
+      tr,
+      td,
+      th {
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      .form-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .form-group input:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .form-group .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .form-group .submit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 480px) {
+        .form-container {
+          padding: 15px;
+        }
+
+        .form-group input {
+          padding: 8px;
+          font-size: 14px;
+        }
+
+        .form-group .submit-btn {
+          padding: 8px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="form-container">
+        <h2>Register</h2>
+        <form action="#" method="post" id="form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="course">Course</label>
+            <input type="text" id="course" name="course" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Submit"
+              class="submit-btn"
+              id="submit-btn"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="display">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Course</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+    let form = document.getElementById("form");
+    let tbody = document.getElementById("tbody");
+
+    let arr = JSON.parse(localStorage.getItem("user")) || [];
+    function getData() {
+      let obj = {
+        name: document.getElementById("name").value,
+        mobile: document.getElementById("mobile").value,
+        email: document.getElementById("email").value,
+        course: document.getElementById("course").value,
+      };
+      arr.push(obj);
+      localStorage.setItem("user", JSON.stringify(arr));
+      form.reset();
+      displayData(arr);
+    }
+    let submit = document.getElementById("submit-btn");
+    // submit.addEventListener("click", getData);
+
+    function displayData(data) {
+      tbody.innerHTML = null;
+      data.map((ele, index) => {
+        let tr = document.createElement("tr");
+        let td = document.createElement("td");
+        td.innerText = index + 1;
+        let td1 = document.createElement("td");
+        td1.innerText = ele.name;
+        let td2 = document.createElement("td");
+        td2.innerText = ele.mobile;
+        let td3 = document.createElement("td");
+        td3.innerText = ele.email;
+        let td4 = document.createElement("td");
+        td4.innerText = ele.course;
+        let td5 = document.createElement("td");
+
+        let btn1 = document.createElement("button");
+        btn1.id = "btn1";
+        btn1.innerText = "Add";
+        btn1.addEventListener("click", () => {
+          addCart("cart", ele);
+          alert("Added To Cart");
+        });
+
+        let btn2 = document.createElement("button");
+        btn2.id = "btn2";
+        btn2.innerText = "Delete";
+        btn2.addEventListener("click", () => {
+          deleteData(arr, index);
+          alert("Deleted");
+          displayData(arr);
+        });
+
+        let btn3 = document.createElement("button");
+        btn3.id = "btn3";
+        btn3.innerText = "Edit";
+        btn3.addEventListener("click", () => {
+          editData(ele, index);
+        });
+
+        td5.append(btn1, btn2, btn3);
+
+        tr.append(td, td1, td2, td3, td4, td5);
+        tbody.append(tr);
+      });
+    }
+    displayData(arr);
+
+    //-----------Add to cart-----------------------------------------
+    function addCart(key, value) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(value);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    //-----------Delete data-----------------------------------------
+    function deleteData(abc, index) {
+      abc.splice(index, 1);
+      localStorage.setItem("user", JSON.stringify(abc));
+    }
+    //------------------Edit-------------------------------------------
+    let state = false;
+    let currentIndex = null;
+    function editData(xyz, index) {
+      state = true;
+      currentIndex = index;
+      let newobj = {
+        name: (document.getElementById("name").value = xyz.name),
+        mobile: (document.getElementById("mobile").value = xyz.mobile),
+        email: (document.getElementById("email").value = xyz.email),
+        course: (document.getElementById("course").value = xyz.course),
+      };
+      //   console.log(newobj,state);
+    }
+    function updateData(data, index) {
+      let newobj2 = {
+        name: document.getElementById("name").value,
+        mobile: document.getElementById("mobile").value,
+        email: document.getElementById("email").value,
+        course: document.getElementById("course").value,
+      };
+      arr[currentIndex] = newobj2;
+      localStorage.setItem("user", JSON.stringify(arr));
+      form.reset();
+      displayData(arr);
+      state = false;
+      // console.log(state,"st",newobj2);
+    }
+    submit.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!state) {
+        getData();
+      } else {
+        updateData();
+      }
+    });
+    
+  </script>
+</html>

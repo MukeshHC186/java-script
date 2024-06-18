@@ -25,6 +25,8 @@
           <li>About</li>
           <li>Contact</li>
           <li>Service</li>
+          <li><a href="#">🛒 <span id="cartitem">0</span></a></li>
+
         </ul>
       </div>
     </nav>
@@ -159,7 +161,7 @@
 
     function displayData(data) {
       tbody.innerHTML = "";
-      
+
       data.map((ele, index) => {
         let tr = document.createElement("tr");
         let td0 = document.createElement("td");
@@ -193,7 +195,7 @@
         editBtn.innerText = "Edit";
         editBtn.id = "editbtn";
         editBtn.addEventListener("click", () => {
-          editData(arr, index);
+          editData(ele, index);
           // alert("Edited")
         });
 
@@ -224,9 +226,9 @@
       currentIndex = index;
 
       let newobj = {
-        name: document.getElementById("name").value = abc[index].name,
-        email: document.getElementById("email").value = abc[index].email,
-        course: document.getElementById("course").value = abc[index].course,
+        name: (document.getElementById("name").value = abc.name),
+        email: (document.getElementById("email").value = abc.email),
+        course: (document.getElementById("course").value = abc.course),
       };
     }
 
@@ -240,6 +242,7 @@
       localStorage.setItem("user", JSON.stringify(arr));
       form.reset();
       displayData(arr);
+      state = false;
     }
 
     btn.addEventListener("click", (e) => {
@@ -249,5 +252,12 @@
         userDetails(e);
       }
     });
+
+    function updateCartQuintity(){
+      let cart=document.getElementById("cartitem")
+      let cartlength=JSON.parse(localStorage.getItem("cart"))
+      cart.innerText=cartlength.length
+    }
+    updateCartQuintity()
   </script>
 </html>
