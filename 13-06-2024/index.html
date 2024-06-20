@@ -25,7 +25,7 @@
           <li>About</li>
           <li>Contact</li>
           <li>Service</li>
-          <li><a href="#">🛒 <span id="cartitem">0</span></a></li>
+          <li><a href="cart.html" id="cartcount" >🛒 <span id="cartitem">0</span></a></li>
 
         </ul>
       </div>
@@ -211,6 +211,7 @@
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(value);
       localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartQuintity()
     }
     //----------delete------------
     function deleteData(key, index) {
@@ -251,6 +252,7 @@
       } else {
         userDetails(e);
       }
+      
     });
 
     function updateCartQuintity(){

@@ -117,6 +117,7 @@
     cursor: pointer;
   }
   .display_data {
+    margin: auto;
     padding: 2rem 5rem;
     width: 69%;
     border-radius: 10px;
