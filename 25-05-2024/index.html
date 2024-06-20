@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+       <h2>Registration form</h2>
+    </div>
+    <div id="main_container">
+        <div id="image_container">
+            <img  id="img" src="https://static3.bigstockphoto.com/7/8/3/large1500/387670762.jpg" alt="">
+        </div>
+        <div id="form_container">
+        <form action="#" method="post" id="form">
+            <label >Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+    
+            <label >Mobile</label>
+            <input type="tel" id="mobile"  placeholder="Your mobile number.." required>
+    
+            <label >Email</label>
+            <input type="email" id="email"  placeholder="Your email.." required>
+    
+            <label >City</label>
+            <input type="text" id="city" placeholder="Your city.." required>
+    
+            <label>Course</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="English">English</option>
+            </select>
+    
+            <input type="submit" id="btn" value="Submit">
+        </form>
+       </div>
+    </div>
+    <div id="display">
+
+    </div>
+</body>
+<script>
+    let arr=JSON.parse(localStorage.getItem("user"))|| []
+    let form=document.getElementById("form")
+    let main_container=document.getElementById("main_container")
+    let form_container=document.getElementById("form_container")
+    let btn=document.getElementById("btn")
+    btn.addEventListener("click",getValue)
+    function getValue(e){
+        e.preventDefault()
+        let obj={
+            name:document.getElementById("name").value,
+            mobile:document.getElementById("mobile").value,
+            email:document.getElementById("email").value,
+            city:document.getElementById("city").value,
+            course:document.getElementById("course").value
+        }
+        arr.push(obj)
+        localStorage.setItem("user",JSON.stringify(arr))
+    }
+    // console.log(arr)
+
+    form.append(name,mobile,email,city,course,btn)
+    form.reset()
+    // displayData(arr)
+
+    function displayData(data){
+        data.innerHTML=null
+        let display=document.getElementById("display")
+        let table=document.createElement("table")
+        let thead=document.createElement("thead")
+        let tbody=document.createElement("tbody")
+        let tr=document.createElement("tr")
+        let th0=document.createElement("th")
+        th0.innerText="Sr.No."
+        let th=document.createElement("th")
+        th.textContent="Name"
+        let th1=document.createElement("th")
+        th1.textContent="Mobile"
+        let th2=document.createElement("th")
+        th2.textContent="Email"
+        let th3=document.createElement("th")
+        th3.textContent="City"
+        let th4=document.createElement("th")
+        th4.textContent="Course"
+
+        let th5=document.createElement("th")
+        th5.innerText="Action"
+
+        tr.append(th0,th,th1,th2,th3,th4,th5)
+        thead.append(tr)
+        table.append(thead,tbody)
+
+        data.forEach(ele=>{
+            let tr=document.createElement("tr")
+            let td0=document.createElement("td")
+            td0.innerText="1"
+            let td=document.createElement("td")
+            td.innerText=ele.name
+            let td1=document.createElement("td")
+            td1.innerText=ele.mobile
+            let td2=document.createElement("td")
+            td2.innerText=ele.email
+            let td3=document.createElement("td")
+            td3.innerText=ele.city
+            let td4=document.createElement("td")
+            td4.innerText=ele.course
+            let td5=document.createElement("button")
+            td5.innerText="Add"
+            
+            tr.append(td0,td,td1,td2,td3,td4,td5)
+            tbody.append(tr)
+            display.append(table)
+
+        })
+    }
+    displayData(arr)
+    </script>
+</html>

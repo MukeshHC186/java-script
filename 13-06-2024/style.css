@@ -44,8 +44,8 @@
     list-style: none;
   }
   .nav_links ul li {
-    margin: 1rem 2rem;
-    padding: 1rem 2rem;
+    /* margin: 1rem 2rem; */
+    padding: 15px 20px;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
   }
@@ -87,11 +87,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem 5rem;
+    padding: 7px;
   }
   .form_container {
-    width: 30%;
-    padding: 2rem 5rem;
+    width: 34%;
+    padding: 4px 9px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -117,9 +117,8 @@
     cursor: pointer;
   }
   .display_data {
-    margin: auto;
-    padding: 2rem 5rem;
-    width: 69%;
+    padding: 10px 15px;
+    width: 64%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -184,6 +183,11 @@
     color: white;
     border: none;
     border-radius: 5px;
+    transition: all .4s ease-in-out;
+  }
+  #addbtn:hover{
+    background-color: rgb(8, 198, 8);
+    cursor: pointer;
   }
   #delbtn{
     padding: 4px 10px;
@@ -192,6 +196,11 @@
     border: none;
     border-radius: 5px;
     margin-left: 5px;
+    transition: all .4s ease-in-out;
+  }
+  #delbtn:hover{
+    background-color: rgb(215, 11, 11);
+    cursor: pointer;
   }
   #editbtn{
     padding: 4px 10px;
@@ -200,6 +209,11 @@
     border: none;
     border-radius: 5px;
     margin-left: 5px;
+    transition: all .4s ease-in-out;
+  }
+  #editbtn:hover{
+    background-color: rgb(32, 51, 227);
+    cursor: pointer;
   }
 
   @media screen and (min-width:150px) and (max-width: 767px) {
