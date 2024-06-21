@@ -102,6 +102,7 @@
 
     function displayCartdata(data){
         let tbody=document.getElementById("tbody")
+        tbody.innerHTML=null
     data.map((ele, index) => {
         let tr = document.createElement("tr");
         let td0 = document.createElement("td");
@@ -114,11 +115,29 @@
         td2.innerText = ele.course;
         let td3 = document.createElement("td");
 
+        let delbtn = document.createElement("button");
+        delbtn.innerText = "Delete";
+        delbtn.id = "delbtn";
+        delbtn.addEventListener("click", () => {
+          deleteData(arr, index);
+          alert("Deleted");
+          displayData(arr);
+        });
+
+        td3.append(delbtn)
         tr.append(td0,td,td1,td2,td3)
         tbody.append(tr)
     })
     }
     displayCartdata(arr)
+  
+
+    function deleteData(key, index) {
+      key.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(key));
+    displayCartdata(arr)
+
+    }
     
 
 </script>
