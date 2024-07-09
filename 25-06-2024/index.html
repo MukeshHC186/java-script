@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">MyBrand</div>
+      <button class="navbar-toggle" id="navbar-toggle">
+        <span class="navbar-toggle-icon">&#9776;</span>
+      </button>
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="#" class="navbar-item">Home</a>
+        <a href="#" class="navbar-item">About</a>
+        <a href="#" class="navbar-item">Services</a>
+        <a href="#" class="navbar-item">Contact</a>
+        <a href="cart.html">🛒<span id="count">0</span></a>
+      </div>
+    </nav>
+    <section class="hero">
+     
+    </section>
+    <div class="main_container">
+      <div class="form-container">
+        <form class="form" id="form">
+          <h2>Sign Up</h2>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="button">
+            <button type="submit" class="btn" id="btn1">Sign Up</button>
+            <button type="submit" class="btn" id="btn2">
+              Click Here To Login
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="display">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("navbar-toggle");
+      const navbarMenu = document.getElementById("navbar-menu");
+
+      toggleButton.addEventListener("click", function () {
+        navbarMenu.classList.toggle("active");
+      });
+    });
+
+    let form = document.getElementById("form");
+    let tbody = document.getElementById("tbody");
+
+    let arr = JSON.parse(localStorage.getItem("userData")) || [];
+    function userData(e) {
+      e.preventDefault();
+      let obj = {
+        name: document.getElementById("name").value,
+        mobile: document.getElementById("mobile").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+      };
+      arr.push(obj);
+      localStorage.setItem("userData", JSON.stringify(arr));
+      form.reset();
+      displayData(arr);
+    }
+    let btn1 = document.getElementById("btn1");
+    btn1.addEventListener("click", userData);
+
+    function displayData(data) {
+      tbody.innerHTML = null;
+      data.map((ele, index) => {
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = index + 1;
+        let td2 = document.createElement("td");
+        td2.innerText = ele.name;
+        let td3 = document.createElement("td");
+        td3.innerText = ele.mobile;
+        let td4 = document.createElement("td");
+        td4.innerText = ele.email;
+        let td5 = document.createElement("td");
+
+        let addbtn = document.createElement("button");
+        addbtn.id = "addbtn";
+        addbtn.innerText = "Add";
+        addbtn.addEventListener("click", () => {
+          addtoCart("cart", ele);
+          alert("Added To Cart");
+          updateCartQuintity();
+        });
+
+        let delbtn = document.createElement("button");
+        delbtn.id = "delbtn";
+        delbtn.innerText = "Delete";
+        delbtn.addEventListener("click", () => {
+            deleteData(arr,index)
+            alert("Deleted")
+            displayData(arr)
+        })
+
+        let editbtn = document.createElement("button");
+        editbtn.id = "editbtn";
+        editbtn.innerText = "Edit";
+
+        td5.append(addbtn, delbtn, editbtn);
+        tr.append(td1, td2, td3, td4, td5);
+        tbody.append(tr);
+      });
+    }
+    displayData(arr);
+
+    //--------------add to cart---------------
+    function addtoCart(key, value) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(value);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    //-------------delete--------------------------
+    function deleteData(key, index) {
+        key.splice(index, 1)
+        localStorage.setItem("userData",JSON.stringify(key))
+    }
+
+    function updateCartQuintity() {
+      let cart = document.getElementById("count");
+      let cartlength = JSON.parse(localStorage.getItem("cart"));
+      cart.innerText = cartlength.length;
+    }
+    updateCartQuintity();
+  </script>
+</html>

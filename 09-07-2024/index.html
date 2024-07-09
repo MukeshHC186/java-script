@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random otp generation</title>
+    <style>
+        .main{
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h1>OTP generation</h1>
+    <button id="btn">Get OTP</button><br><br>
+    <h3>Your otp is :- <span id="otp"></span></h3>
+</div>
+</body>
+<script>
+    let otp=document.getElementById("otp")
+    let btn=document.getElementById("btn")
+    btn.addEventListener("click",getOtp)
+    function getOtp(){
+        let bag=" "
+        for(i=1;i<7;i++){
+          let number=Math.floor(Math.random()*10)  
+          bag=bag+number+" "
+        }
+        otp.innerText=bag
+    }
+</script>
+</html>

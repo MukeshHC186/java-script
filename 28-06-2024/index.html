@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API CALL</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>Total Count: <span id="count">0</span></h1>
+
+    <div id="container"></div>
+  </body>
+  <script>
+    let container = document.getElementById("container");
+    let count = document.getElementById("count");
+    let arr = [];
+
+    async function getDatafromAPI() {
+      try {
+        let response = await axios.get("https://fakestoreapi.com/products");
+        arr = response.data;
+        count.innerText = arr.length;
+        console.log(arr);
+        displayData(arr);
+      } catch (error) {
+        console.log("error");
+      }
+    }
+
+    getDatafromAPI();
+
+    function displayData() {
+      arr.map((ele) => {
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = ele.image;
+        let title = document.createElement("h3");
+        title.innerText = ele.price;
+        let about = document.createElement("h3");
+        about.innerText = ele.title;
+        let details = document.createElement("p");
+        details.innerText = ele.description;
+        let btn = document.createElement("button");
+        btn.innerText = "Buy Now";
+
+        div.append(img, title, about, details, btn);
+        container.append(div);
+      });
+    }
+  </script>
+</html>

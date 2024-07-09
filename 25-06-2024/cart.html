@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">MyBrand</div>
+        <button class="navbar-toggle" id="navbar-toggle">
+            <span class="navbar-toggle-icon">&#9776;</span>
+        </button>
+        <div class="navbar-menu" id="navbar-menu">
+            <a href="./index.html" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">About</a>
+            <a href="#" class="navbar-item">Services</a>
+            <a href="#" class="navbar-item">Contact</a>
+            <a href="#">🛒<span id="count">0</span></a>
+        </div>
+    </nav>
+
+    <div class="display">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+</body>
+<script>
+    let cart=JSON.parse(localStorage.getItem("cart"))||[]
+    function displayCart(data){
+        let tbody=document.getElementById("tbody")
+        tbody.innerHTML=null
+        data.forEach((item,index)=>{
+            let tr=document.createElement("tr")
+            let td1=document.createElement("td")
+            td1.innerText=index+1
+            let td2=document.createElement("td")
+            td2.innerText=item.name
+            let td3=document.createElement("td")
+            td3.innerText=item.mobile
+            let td4=document.createElement("td")
+            td4.innerText=item.email
+            
+            tr.append(td1,td2,td3,td4)
+            tbody.append(tr)
+        })
+    }
+    displayCart(cart)
+
+    function updateCartQuintity() {
+      let cart = document.getElementById("count");
+      let cartlength = JSON.parse(localStorage.getItem("cart"));
+      cart.innerText = cartlength.length;
+    }
+    updateCartQuintity();
+</script>
+</html>
