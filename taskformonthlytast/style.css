@@ -1,0 +1,262 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/459/652/925/simple-background-full-for-desktop-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_links li {
+    display: inline;
+}
+
+.nav_links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.nav_links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.menu_icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu_icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.container {
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.788);
+    /* border: 1px solid #ddd; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    opacity: 100%;
+}
+
+.form_group {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    width: 95%;
+}
+
+.button_group {
+    /* border: 1px solid red; */
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn1 {
+    background-color: #4CAF50;
+    color: #fff;
+    width: 100%;
+     padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+}
+
+.btn1:hover {
+    opacity: 0.8;
+}
+.btn2 {
+    background-color: rgba(0, 0, 255, 0.822);
+    color: #fff;
+    width: 100%;
+     padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+}
+
+.btn2:hover {
+    opacity: 0.8;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_col {
+    flex-basis: 23%;
+    margin: 20px;
+}
+
+.footer_col h4 {
+    margin-bottom: 10px;
+}
+
+.footer_col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_col li {
+    margin-bottom: 10px;
+}
+
+.footer_col a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_col a:hover {
+    color: #ccc;
+}
+
+.footer_col i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.footer_copyright {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subscribe_btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.subscribe_btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .footer_col {
+        flex-basis: 48%;
+        margin: 20px;
+    }
+    .footer_col {
+        flex-basis: 48%;
+        margin: 20px;
+    }
+    .nav_links {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        top: 60px;
+        right: 20px;
+        flex-direction: column;
+        width: 200px;
+        gap: 0;
+    }
+    
+    .nav_links li {
+        display: block;
+        text-align: center;
+    }
+
+    .menu_icon {
+        display: flex;
+    }
+
+    .nav_links.active {
+        display: flex;
+    }
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .form_group {
+        margin-bottom: 15px;
+    }
+    .button_group {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .footer_col {
+        flex-basis: 100%;
+        margin: 20px;
+    }
+    .footer_col {
+        flex-basis: 100%;
+        margin: 20px;
+    }
+}
+

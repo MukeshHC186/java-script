@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <form class="form" id="form">
+                <h2>Sign Up Here</h2>
+                <div class="form_group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form_group">
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" id="mobile" placeholder="Enter your mobile number">
+                </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form_group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="button_group">
+                    <button class="btn btn2" id="btn2" >Sign Up</button>
+                </div>
+                <h4>allready have an account please login here <a href="index.html">Login</a></h4>
+            </form>
+            <script>
+                let arr=[]
+                let form=document.getElementById("form")
+                function userDetails(e){
+                    e.preventDefault()
+                 let obj={
+                    name:document.getElementById("name").value,
+                    mobile:document.getElementById("mobile").value,
+                    email:document.getElementById("email").value,
+                    password:document.getElementById("password").value
+                 }
+                 arr.push(obj)
+                 localStorage.setItem("users",JSON.stringify(arr))
+                 alert("Data Saved Sacussfully")
+                 form.reset()
+                }
+                let btn2=document.getElementById("btn2")
+                btn2.addEventListener("click",userDetails)
+                
+            </script>
+        </div>
+        
