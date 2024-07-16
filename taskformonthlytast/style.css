@@ -57,7 +57,7 @@ body {
 }
 .container {
     width: 40%;
-    margin: auto;
+    margin: 10% auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.788);
     /* border: 1px solid #ddd; */
@@ -68,8 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    opacity: 100%;
+    /* padding: 20px; */
 }
 
 .form_group {
@@ -116,7 +115,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     opacity: 0.8;
 }
 .btn2 {
-    background-color: rgba(0, 0, 255, 0.822);
+    background-color: #4CAF50;
     color: #fff;
     width: 100%;
      padding: 10px 20px;
@@ -197,15 +196,8 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
 
 /* Responsive design */
 
-@media (max-width: 768px) {
-    .footer_col {
-        flex-basis: 48%;
-        margin: 20px;
-    }
-    .footer_col {
-        flex-basis: 48%;
-        margin: 20px;
-    }
+@media (min-width: 200px) and (max-width:768px) {
+    
     .nav_links {
         display: none;
         position: absolute;
@@ -230,8 +222,22 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
         display: flex;
     }
     .container {
+       border: 1px solid red; 
         width: 90%;
-        margin: 20px auto;
+        margin: auto;
+    }
+    .form{
+       border: 1px solid red; 
+       width: 100%;
+       
+    }
+    .footer_col {
+        flex-basis: 48%;
+        margin: 20px;
+    }
+    .footer_col {
+        flex-basis: 48%;
+        margin: 20px;
     }
 }
 

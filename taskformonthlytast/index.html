@@ -8,7 +8,7 @@
 </head>
 <body>
         <div class="container">
-            <form class="form">
+            <form class="form" id="form">
                 <h2>Login Here</h2>
                 <div class="form_group">
                     <label for="email">Email</label>
@@ -19,11 +19,34 @@
                     <input type="password" id="password" placeholder="Enter your password">
                 </div>
                 <div class="button_group">
-                    <button class="btn btn1">Login</button>
+                    <button class="btn btn1" id="btn1">Login</button>
                 </div>
                 <h4>don't have account please sign up here <a href="signup.html">Sign up</a></h4>
             </form>
         </div>
-    <script src="script.js"></script>
+    <script>
+        let arrForLogin=JSON.parse(localStorage.getItem("users"))||[]
+        console.log(arrForLogin);
+        let form=document.getElementById("form")
+        function loginMatch(user){
+            user.preventDefault()
+            let newobj={
+                email:document.getElementById("email").value,
+                password:document.getElementById("password").value
+            }
+            let valueCheck=arrForLogin.find((element)=>(
+             element.email === newobj.email && element.password === newobj.password)
+            )
+            if(valueCheck){
+                localStorage.setItem("loggedInuser",JSON.stringify(valueCheck))
+                alert("login success")
+                window.location.href="home.html"
+            }else{
+                alert("login failed")
+            }
+            form.reset()
+        }
+        document.getElementById("btn1").addEventListener("click",loginMatch)
+    </script>
 </body>
 </html>
