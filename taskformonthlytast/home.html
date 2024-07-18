@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="m">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to home page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container1">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./Screenshot 2024-07-18 105302.png" alt="logo" />
+        </div>
+        <div class="menu_icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav_links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./signup.html">Signup</a></li>
+            <li><a href="./index.html">Login</a></li>
+            <li><a href="./home.html">About</a></li>
+          </ul>
+        </div>
+        <h5 id="LoginName"></h5>
+      </nav>
+      <div class="hero_section"></div>
+      <div class="additional_form"></div>
+      <div class="apicall" id="apicall"></div>
     </div>
-</body>
-<script>
-    let m=document.getElementById("m")
-    let homeData=JSON.parse(localStorage.getItem("loggedInuser"))||[]
-    let h1=document.createElement("h1")
-    h1.innerText=homeData.name
-    h1.append(m)
-</script>
+  </body>
+  <script>
+    let loggedInuser = JSON.parse(localStorage.getItem("loggedInuser"));
+    let LoginName = document.getElementById("LoginName");
+    LoginName.innerHTML = `👮:- ${loggedInuser.name}`;
+
+    let arr = [];
+    async function getDatafromApi() {
+      try {
+        let res = await axios.get("https://fakestoreapi.com/products");
+        arr = res.data;
+        displayData(arr);
+
+        // console.log(arr);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getDatafromApi();
+    let display = document.getElementById("apicall");
+
+    async function displayData() {
+      // e.preventDefault()
+      arr.map((ele) => {
+        let div = document.createElement("div");
+        div.class = "display_card";
+        div.style.border="1px solid red"
+        let img = document.createElement("img");
+        img.src = ele.image;
+        let h3 = document.createElement("h3");
+        h3.innerText = ele.price;
+
+        div.append(img, h3);
+        display.append(div);
+      });
+
+      console.log(display);
+    }
+    displayData(arr);
+  </script>
 </html>

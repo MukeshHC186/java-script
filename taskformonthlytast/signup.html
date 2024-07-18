@@ -31,25 +31,29 @@
                 </div>
                 <h4>allready have an account please login here <a href="index.html">Login</a></h4>
             </form>
-            <script>
-                let arr=JSON.parse(localStorage.getItem("users"))||[]
-                let form=document.getElementById("form")
-                function userDetails(e){
-                    e.preventDefault()
-                 let obj={
-                    name:document.getElementById("name").value,
-                    mobile:document.getElementById("mobile").value,
-                    email:document.getElementById("email").value,
-                    password:document.getElementById("password").value
-                 }
-                 arr.push(obj)
-                 localStorage.setItem("users",JSON.stringify(arr))
-                 alert("Data Saved Sacussfully")
-                 form.reset()
-                }
-                let btn2=document.getElementById("btn2")
-                btn2.addEventListener("click",userDetails)
-                
-            </script>
+            
         </div>
+        </body>
+        <script>
+            let arr=JSON.parse(localStorage.getItem("users"))||[]
+            let form=document.getElementById("form")
+            function userDetails(e){
+                e.preventDefault()
+             let obj={
+                name:document.getElementById("name").value,
+                mobile:document.getElementById("mobile").value,
+                email:document.getElementById("email").value,
+                password:document.getElementById("password").value
+             }
+             arr.push(obj)
+             localStorage.setItem("users",JSON.stringify(arr))
+             alert("Data Saved Sacussfully")
+             form.reset()
+            }
+            let btn2=document.getElementById("btn2")
+            btn2.addEventListener("click",userDetails)
+            
+        </script>
+        </html>
+
         
