@@ -27,8 +27,17 @@
           </ul>
         </div>
         <h5 id="LoginName"></h5>
+        <a href="./index.html"><button id="logout">Logout</button></a>
       </nav>
-      <div class="hero_section"></div>
+      <div class="hero_section">
+        <h1>Welcome To our Website</h1>
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide a platform for the people to share their ideas and thoughts</p>
+        <p>Created By Mukesh Kumar Jat 
+          <br>Mobile No. 8441925100
+          <br>Email:- mjatsuper@gmail.com
+        </p>
+      </div>
       <div class="additional_form"></div>
       <div class="apicall" id="apicall"></div>
     </div>
@@ -44,7 +53,6 @@
         let res = await axios.get("https://fakestoreapi.com/products");
         arr = res.data;
         displayData(arr);
-
         // console.log(arr);
       } catch (error) {
         console.log(error);
@@ -52,7 +60,6 @@
     }
     getDatafromApi();
     let display = document.getElementById("apicall");
-
     async function displayData() {
       // e.preventDefault()
       arr.map((ele) => {
