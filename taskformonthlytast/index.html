@@ -39,10 +39,10 @@
             )
             if(valueCheck){
                 localStorage.setItem("loggedInuser",JSON.stringify(valueCheck))
-                alert("login success")
+                alert("login successfully")
                 window.location.href="home.html"
             }else{
-                alert("login failed")
+                alert("login failed Email or password not found")
             }
             form.reset()
         }

@@ -24,7 +24,7 @@ body {
 .nav_links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 70px;
 }
 
 .nav_links li {
@@ -55,9 +55,13 @@ body {
     margin: 4px 0;
     transition: 0.4s;
 }
+.hero_section{
+    background-image: url("https://as1.ftcdn.net/v2/jpg/08/02/19/96/1000_F_802199654_Xi6nY7SllzlCEz7YxKJoKDPMWI5DyCFS.jpg")
+    
+}
 .container {
     width: 40%;
-    margin: 10% auto;
+    margin: 6% auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.788);
     /* border: 1px solid #ddd; */
