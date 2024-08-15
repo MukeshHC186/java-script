@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script>
+    let obj = {
+      personal: {
+        name: "John",
+        age: 22,
+        gender: "",
+        religion: "",
+      },
+      education: ["B. Tech, M. Tech"],
+      geological: {
+        place: "NY",
+        county: "NJ",
+        country: "USA",
+        nationality: "",
+        citizenship: null,
+      },
+      hobbies: {
+        reading: true,
+        gaming: false,
+        sport: "football",
+      },
+      class: ["JavaScript", "HTML", "CSS"],
+      friends:{}
+    };
+    const root=document.getElementById("root")
+    const main_arr=Object.keys(obj)
+    // console.log(main_arr);  
+    main_arr.forEach(ele=>{
+        const div=document.createElement("div")
+        div.id=ele
+        const h2=document.createElement("h2")
+        h2.textContent=ele
+        div.appendChild(h2)
+        root.append(div)
+
+    })
+    main_arr.forEach(ele=>{
+        const subDiv=document.createElement("div")
+        subDiv.id=ele
+        const value=obj[ele]
+        // console.log(value);
+        Object.keys(value).forEach(key=>{
+            const subDiv=document.createElement("div")
+            subDiv.id=key
+         if(Array.isArray(!!value&&value.length)){
+            const ul=document.createElement("ul")
+            value.forEach(item=>{
+                const li=document.createElement("li")
+                li.textContent=item
+                ul.append(li)
+                subDiv.append(ul)
+                console.log(subDiv);
+            })
+         }
+        })
+    })
+</script>
+</html>
