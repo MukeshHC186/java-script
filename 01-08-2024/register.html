@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+			background-color: #f9f9f9;
+		}
+		
+		.registration-form {
+			max-width: 50%;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.form-group {
+			margin-bottom: 20px;
+		}
+		
+		.form-control {
+			width: 96%;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		.form-control:focus {
+			border-color: #aaa;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.button {
+            width: 100%;
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		
+		.error-message {
+			color: red;
+			font-size: 14px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="registration-form">
+		<h2>Register Now</h2>
+		<form>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" id="name" class="form-control" placeholder="Enter your name">
+			</div>
+			<div class="form-group">
+				<label for="mobile">Mobile Number</label>
+				<input type="tel" id="mobile" class="form-control" placeholder="Enter your mobile number">
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" class="form-control" placeholder="Enter your email">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" id="password" class="form-control" placeholder="Enter your password">
+			</div>
+			<div class="form-group">
+				<label for="confirm-password">Confirm Password</label>
+				<input type="password" id="confirm-password" class="form-control" placeholder="Enter your password again">
+			</div>
+			<button class="button">Register</button>
+			<p class="error-message" id="error-message"></p>
+		</form>
+        <h4>If allready have an account please <a href="./index.html">Login Here</a></h4>
+	</div>
+	
+	<script>
+        let arr=JSON.parse(localStorage.getItem("user"))||[]
+		// Add event listener to the form submission
+		document.querySelector('form').addEventListener('submit', (e) => {
+			e.preventDefault();
+			// Validate the form fields
+			const name = document.querySelector('#name').value;
+			const mobile = document.querySelector('#mobile').value;
+			const email = document.querySelector('#email').value;
+			const password = document.querySelector('#password').value;
+			const confirmPassword = document.querySelector('#confirm-password').value;
+            let obj={
+                name:name,
+                mobile:mobile,
+                email:email,
+                password:password
+            }
+            arr.push(obj)
+            localStorage.setItem("user",JSON.stringify(arr))
+			
+			if (name === '' || mobile === '' || email === '' || password === '' || confirmPassword === '') {
+				document.querySelector('#error-message').innerHTML = 'Please fill in all the fields';
+				return;
+			}
+			
+			if (password !== confirmPassword) {
+				document.querySelector('#error-message').innerHTML = 'Passwords do not match';
+				return;
+			}
+			alert("Data Saved Sucessfully" )
+            window.location.href="index.html"
+			// Send the form data to the server
+			// ...
+			
+			// Clear the form fields
+			document.querySelector('form').reset();
+		});
+	</script>
+</body>
+</html>
