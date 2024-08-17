@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>java script</title>
+  </head>
+  <body>
+    <div id="main_container"></div>
+  </body>
+  <script>
+    let obj = {
+      personal: {
+        name: "John",
+        age: 22,
+        gender: "",
+        religion: "",
+      },
+      education: ["B. Tech, M. Tech"],
+      geological: {
+        place: "NY",
+        county: "NJ",
+        country: "USA",
+        nationality: "",
+        citizenship: null,
+      },
+      hobbies: {
+        reading: true,
+        gaming: false,
+        sport: "football",
+      },
+      class: ["JavaScript", "HTML", "CSS"],
+      friends: {},
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSNMe5l8QC3DvHF4c-ieMHu_HSDzeEI8ySA&s",
+    };
+    const main_container=document.getElementById("main_container")
+    const img=document.createElement("img")
+    img.src=obj.image
+    const h1=document.createElement("h1")
+    const root=document.createElement("div")
+    h1.innerText="Persnol portfolio"
+    main_container.append(img,h1,root)
+    const main_arr=Object.keys(obj)
+    main_arr.forEach(ele=>{
+        const value=obj[ele]
+        const div=document.createElement("div")
+        if(!!value&&Object.keys(value).length)
+        div.id=ele
+        const h2=document.createElement("h2")
+        h2.textContent=ele
+        div.append(h2)
+        root.append(div)
+    })  
+    main_arr.forEach(ele=>{
+        const value=obj[ele]
+
+    })  
+  </script>
+</html>

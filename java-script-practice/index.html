@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>java script</title>
-</head>
-<body>
-    <div id="root">
-
-    </div>
-</body>
-<script>
+  </head>
+  <body>
+    <div id="main_container"></div>
+  </body>
+  <script>
     let obj = {
       personal: {
         name: "John",
@@ -32,39 +30,67 @@
         sport: "football",
       },
       class: ["JavaScript", "HTML", "CSS"],
-      friends:{}
+      friends: {},
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSNMe5l8QC3DvHF4c-ieMHu_HSDzeEI8ySA&s",
     };
-    const root=document.getElementById("root")
-    const main_arr=Object.keys(obj)
-    // console.log(main_arr);  
-    main_arr.forEach(ele=>{
-        const div=document.createElement("div")
-        div.id=ele
-        const h2=document.createElement("h2")
-        h2.textContent=ele
-        div.appendChild(h2)
-        root.append(div)
-
-    })
-    main_arr.forEach(ele=>{
-        const subDiv=document.createElement("div")
-        subDiv.id=ele
-        const value=obj[ele]
-        // console.log(value);
-        Object.keys(value).forEach(key=>{
-            const subDiv=document.createElement("div")
-            subDiv.id=key
-         if(Array.isArray(!!value&&value.length)){
-            const ul=document.createElement("ul")
-            value.forEach(item=>{
-                const li=document.createElement("li")
-                li.textContent=item
-                ul.append(li)
-                subDiv.append(ul)
-                console.log(subDiv);
-            })
-         }
-        })
-    })
-</script>
+    const root = document.getElementById("main_container");
+    const image_div = document.createElement("div");
+    image_div.id = "image_div";
+    const persnolinfo_div = document.createElement("div");
+    persnolinfo_div.id = "persnolinfo_div";
+    root.append(image_div, persnolinfo_div);
+    const image = document.createElement("img");
+    image.src = obj.image;
+    image.id = "img";
+    const h1 = document.createElement("h1");
+    h1.innerText = "Persnol portfolio";
+    image_div.append(image, h1);
+    const main_arr = Object.keys(obj);
+    // console.log(main_arr);
+    main_arr.forEach((ele) => {
+      const value = obj[ele];
+      if (!!value && !!Object.keys(value).length) {
+        console.log(ele);
+        const div = document.createElement("div");
+        div.id = ele;
+        div.style = "border:1px solid red";
+        const h2 = document.createElement("h2");
+        h2.textContent = ele;
+        div.append(h2);
+        persnolinfo_div.append(div);
+      }
+    });
+    main_arr.forEach((ele) => {
+      const value = obj[ele];
+      const parent_ele = document.getElementById(ele);
+    //   parent_ele.setAttribute('id','parent_ele')
+      if (!!value && Object.keys(value).length) {
+        if (Array.isArray(value)) {
+          const ul = document.createElement("ul");
+          value.forEach((item) => {
+            let li = document.createElement("li");
+            li.textContent = item;
+            ul.append(li);
+            parent_ele.append(ul);
+          });
+        } else if (typeof value === "object") {
+          Object.keys(value).forEach((key) => {
+            const div = document.createElement("div");
+            div.id = key;
+            const label = document.createElement("label");
+            label.textContent = key + ": ";
+            const span = document.createElement("span");
+            span.textContent = !!value[key]?value[key]:'-';
+            div.append(label, span);
+            parent_ele.appendChild(div);
+          });
+        }else{
+          const other=document.createElement('p')
+          other.textContent=value
+          parent_ele.appendChild(other)
+        }
+      }
+    });
+  </script>
 </html>
