@@ -17,17 +17,20 @@ const sidebarData1={
             key:"help",
             label:"Help"
         }
-    ]
+    ],
+    image:"https://media.istockphoto.com/id/2149589805/photo/abstract-finance-technology-concept.jpg?s=1024x1024&w=is&k=20&c=ZW_zcYUx0tNloJBxnDoIozUU8U0aBdcYMwdy5BRAbI4="
 }
 function displayDashbordData(){
     const dasbord=document.createElement("div")
+    dasbord.className="dashbord_div"
+    const img=document.createElement("img")
+    img.src=sidebarData1.image
     const h1=document.createElement("h1")
     h1.textContent=sidebarData1.header
-    dasbord.append(h1)
-    sidebarData1.contact.forEach(ele=>{
-        const div=document.createElement("div")
-        div.id=ele.key
+    dasbord.append(h1,img)
+    const div=document.createElement("div")
         div.className="dash_btn_div"
+    sidebarData1.contact.forEach(ele=>{
         const button=document.createElement("button")
         button.textContent=ele.label
         button.className="dashbord_page_btn"
