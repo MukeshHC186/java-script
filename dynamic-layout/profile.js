@@ -38,9 +38,9 @@ function displayProfileData() {
       const span = document.createElement("span");
       span.textContent = !!value[key] ? value[key] : " -";
       sub_div.append(label,span);
+      profile_div.appendChild(sub_div);
     }
-    profile_div.appendChild(sub_div);
-    console.log(profile_div);
+    // console.log(profile_div);
     replaceChildElement(profile_div);
   });
 }

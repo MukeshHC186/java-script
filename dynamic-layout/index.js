@@ -46,6 +46,9 @@ function displaysidebarButtons(){
     sidebar.append(ul)
 }
 displaysidebarButtons()
+// function urlChange(key){
+//     window.location.replace(key)
+// }
 function handelsidebarBtnClick(key){
     const pagesObj={
         dashbord:displayDashbordData,
@@ -69,3 +72,4 @@ function replaceChildElement(element){
         main_content.appendChild(element)
     }
 }
+window.onload=(()=>handelsidebarBtnClick("dashbord"))

@@ -34,7 +34,8 @@ main{
 footer{
     grid-area: footer;
     /* border: 1px solid red; */
-
+    background-color: #000000d8;
+    color: white;
 }
 .dashbord_buttons{
     width: 98%;
@@ -48,4 +49,41 @@ footer{
 
 ul{
     list-style: none;
+}
+.nameDiv{
+    /* border: 1px solid red; */
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+    background-color: #dad5d5;
+}
+.contactDiv{
+    padding: 20px;
+}
+.nameDiv form{
+    /* border: 1px solid red; */
+    text-align: left;
+    display: grid;
+    font-size: 20px;
+}
+.nameDiv form input,.nameDiv form textarea{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+}
+.nameDiv form textarea{
+    height: 50px;
+}
+label{
+    margin-top: 10px;
+}
+#btn{
+    margin: 15px auto;
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #5e9648;
+    font-size: 20px;
 }
