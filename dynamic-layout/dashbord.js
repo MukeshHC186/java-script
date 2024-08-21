@@ -23,21 +23,19 @@ const sidebarData1={
 function displayDashbordData(){
     const dasbord=document.createElement("div")
     dasbord.className="dashbord_div"
-    const img=document.createElement("img")
-    img.src=sidebarData1.image
     const h1=document.createElement("h1")
     h1.textContent=sidebarData1.header
-    dasbord.append(h1,img)
+    dasbord.append(h1)
     const div=document.createElement("div")
         div.className="dash_btn_div"
     sidebarData1.contact.forEach(ele=>{
         const button=document.createElement("button")
         button.textContent=ele.label
         button.className="dashbord_page_btn"
-        button.addEventListener("click",()=>handelsidebarBtnClick(btn.key))
+        button.addEventListener("click",()=>handelsidebarBtnClick(ele.key))
         div.appendChild(button)
         dasbord.appendChild(div)
-        replaceChildElement(dasbord)
     })
+    replaceChildElement(dasbord)
     // console.log("dashbord");
 }

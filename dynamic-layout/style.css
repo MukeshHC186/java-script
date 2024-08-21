@@ -55,13 +55,20 @@ footer{
 }
 .dash_btn_div{
     /* border: 1px solid red; */
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    width: 90%;
     padding: 3px;
+    display: flex;
+    gap: 25px;
     margin: auto;
 }
-
+.dash_btn_div button{
+padding: 45px;
+font-size: x-large;
+transition: all 1s ease-in-out;
+}
+.dash_btn_div button:hover{
+    transform: scale(1.05);
+    }
 ul{
     list-style: none;
 }
@@ -73,7 +80,7 @@ ul{
     padding: 10px;
 }
 .card_container img{
-    width: 100%;
+    width: 85%;
     height: 280px;
     border-radius: 20px 40px;
     transition: all .5s ease-in-out;
@@ -83,11 +90,12 @@ ul{
     cursor: pointer;
 }
 .card_container button{
-    padding: 7px 10px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
-    width: 50%;
+    width: 30%;
+    margin-top: 10px;
 color: white;
 background-color: rgba(34, 33, 33, 0.801);
 border: none;

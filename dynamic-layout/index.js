@@ -50,6 +50,7 @@ displaysidebarButtons()
 //     window.location.replace(key)
 // }
 function handelsidebarBtnClick(key){
+    
     const pagesObj={
         dashbord:displayDashbordData,
         profile:displayProfileData,
