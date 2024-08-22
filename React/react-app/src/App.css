@@ -38,28 +38,3 @@ footer{
   background-color: #000000d8;
   color: white;
 }
-.btn_div{
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  gap:.7rem;
-  padding: 5px;
-}
-.btn{
-  width: 80%;
-  height: 30px;
-  padding: 5px;
-  background-color: #0b65ec;
-  color: white;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  margin: auto;
-  transition: all 1s ease-in-out;
-}
-.btn:hover{
-  background-color: #3072d6ec;
-}
-h2{
-  margin-top: 20px;
-}

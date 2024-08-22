@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+import './aside.css'
 const sidebarData={
     header:"Welcome To Dashbord",
     contact:[
@@ -25,16 +27,13 @@ const sidebarData={
 }
 
 function Aside(){
-    const handleBtnClick=(obj)=>{
-     console.log(obj.key)
-    }
+    
     return (
         <aside id="side_bar" >
            <h2>{sidebarData.header}</h2> 
            <div className="btn_div">
-            {sidebarData.contact.map(hd=>{
-                return <button id={hd.key} className="btn" onClick={()=>handleBtnClick(hd)}>{hd.label}</button>
-            }) }
+            {sidebarData.contact.map(hd=><Link to={hd.key} key={hd.key} className='btn'>{hd.label}</Link>
+            ) }
            </div>
         </aside>
     )
