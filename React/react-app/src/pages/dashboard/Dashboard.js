@@ -1,5 +1,5 @@
 
-import LinkList from '../../components/linkList/LinkList'
+import LinkList from '../../components/common/linkList/LinkList'
 import './Dashbord.css'
 const obj={
     header:"Welcome to React Course",

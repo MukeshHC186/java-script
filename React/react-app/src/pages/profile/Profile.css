@@ -1,0 +1,22 @@
+.profile_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* border: 1px solid red; */
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.profile_container div{
+   font-size: large;
+   
+}
+.cards_div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    border-radius: 10px;
+}
+ul{
+    list-style: none;
+}

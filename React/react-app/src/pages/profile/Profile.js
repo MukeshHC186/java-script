@@ -1,4 +1,5 @@
-
+import DisplayObj from '../../components/common/displayObj/DisplayObj'
+import './Profile.css'
 const profileObj={
     heading:"Profile",
     personal_details:{
@@ -23,23 +24,23 @@ const profileObj={
 const Profile=()=>{
     return(
     <div className="profile">
-     <h1>{profileObj.heading}</h1>
-     
-     <div className="profile_container">
-        <div>
-            {Object.keys(profileObj.personal_details).map(attr=>{
-                return(
-                    <div>
-                        <label>{attr+":- "}</label>
-                        <span>{profileObj.personal_details[attr]}</span>
-                    </div>
-                )
-            })}
+        <h1>{profileObj.heading}</h1>
+        <div className='profile_container'>
+        <DisplayObj title="personal_details"  dataObj={profileObj.personal_details} className="cards_div"/>
+        <DisplayObj title="Education"  dataObj={profileObj.Education}  className="cards_div"/>
+        <DisplayObj title="Contact"  dataObj={profileObj.Contact}  className="cards_div"/>
+        <div className="cards_div">
+        <h2>intrest</h2>
+        {profileObj.intrest.map(attr=>{
+            return(
+                <li>{attr}</li>
+                
+            )
+        })}
+
+    </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-     </div>
+        
     </div>
     )
 }
