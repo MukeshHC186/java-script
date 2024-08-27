@@ -1,0 +1,16 @@
+.about-us div{
+    width: 95%;
+    padding: 1rem;
+    margin: auto;
+    font-size: large;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    text-align: justify;
+  }
+  .about-us div img{
+    width: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+  }

@@ -30,7 +30,7 @@ aside{
 main{
   grid-area: main;
   /* border: 1px solid red; */
-  background-color: #d6d1d1;
+ 
 }
 footer{
   grid-area: footer;
@@ -38,3 +38,4 @@ footer{
   background-color: #000000d8;
   color: white;
 }
+
