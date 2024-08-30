@@ -1,0 +1,14 @@
+.Main_container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-template-areas: "aside main ";
+}
+aside{
+    grid-area: aside;
+    border: 1px solid red;
+}
+main{
+    grid-area: main;
+    border: 1px solid red;
+}
