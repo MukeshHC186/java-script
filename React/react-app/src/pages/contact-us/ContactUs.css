@@ -25,6 +25,14 @@
     border-bottom: 1px solid gray;
     padding: 5px;
 }
+.form div textarea{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border-bottom: 1px solid gray;
+    padding: 5px; 
+}
 label{
     font-size: large;
 }
@@ -49,6 +57,6 @@ label{
 h1{
     background-color: rgb(75, 114, 146);
     color: white;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 

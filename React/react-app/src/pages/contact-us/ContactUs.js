@@ -1,3 +1,4 @@
+import CreateFormFields from '../../components/common/createFormFields/CreateFormFields';
 import './ContactUs.css'
 const contactUsObj = {
     heading:"Contact Us",
@@ -23,7 +24,7 @@ const contactUsObj = {
     {
       Id: "mobile",
       type: "input",
-      subType: "mobile",
+      subType: "tel",
       label: "Mobile:- ",
       placeholder: "Enter your mobile number",
       name: "mobile",
@@ -32,24 +33,16 @@ const contactUsObj = {
       Id: "message",
       type: "textarea",
       label: "Message:- ",
-      name: "message",
+      placeholder:"Enter Your Message",
+      name: "message"
+      
     },
   ],
 };
 const ContactUs = () => {
   return <div className="contact-us">
     <h1>{contactUsObj.heading}</h1>
-    <form className="form">
-        {contactUsObj.form.map(ele=>{
-            return <div key={ele.Id}>
-                <label>{ele.label}</label>
-                <input type={ele.type} name={ele.name} placeholder={ele.placeholder}required />
-            </div>
-        })}
-        <div className='btn_div1'>
-        <button>Submit</button>
-        </div>
-    </form>
+    <CreateFormFields FormArr={contactUsObj.form} />
   </div>;
 };
 export default ContactUs;

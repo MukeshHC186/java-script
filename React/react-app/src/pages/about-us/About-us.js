@@ -9,7 +9,7 @@ return (
     <div className="about-us">
         <h1>{aboutUsObj.heading}</h1>
         <div>
-        <img src={aboutUsObj.img}></img>
+        <img src={aboutUsObj.img} alt='img'></img>
         <p>{aboutUsObj.p}</p>
         </div>
     </div>

@@ -19,7 +19,7 @@ nav{
   width: 100%;
   grid-area:nav;
   /* border: 1px solid red; */
-  background-color: #000000d8;
+  background-color: rgb(75, 114, 146);
   color: white;
 }
 aside{
@@ -35,7 +35,7 @@ main{
 footer{
   grid-area: footer;
   /* border: 1px solid red; */
-  background-color: #000000d8;
+  background-color: rgb(75, 114, 146);
   color: white;
 }
 

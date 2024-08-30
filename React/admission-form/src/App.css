@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  /* border: 1px solid red; */
+}
+.heading {
+  background-color: #282c34;
+  padding: 5px;
+  line-height: 10px;
+  /* border: 1px solid red; */
+  color: white;
+  margin-bottom: 10px;
+}
+h1{
+  color: aqua;
+}
+h3{
+  color: rgb(17, 166, 235);
+}
+.form{
+  padding: 1rem;
+  width: 60%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.persnol_details_main{
+  /* border: 1px solid red; */
+  font-size: 18px;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.btn_div{
+  /* border: 1px solid red; */
+  font-size: 18px;
+  width: 80%;
+  margin:20px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn_1{
+  background-color: #167c2e;
+  color: white;
+  border-radius: 7px;
+  border: none;
+  font-size: 15px;
+}
+.btn_2{
+  background-color: rgb(28, 128, 216);
+  color: white;
+  border-radius: 7px;
+  border: none;
+  font-size: 15px;
+}
+.persnol_details{
+  text-align: left;
+  /* margin:0px 0px 0px 10px; */
+}
+.persnol_details input{
+  margin-left: 250px;
+  border: none;
+  border: 1px dotted black;
+  width: 60%;
+  height: 30px;
+  border-radius: 10px;
+}
+label{
+  font-weight: bold;
+}
+.bottom_div{
+  padding-top: 200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid gray; */
+}
+button{
+  padding: 10px 70px;
+}
+.table_div{
+  padding: 1rem;
+  width: 60%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+table,th,tr,td{
+  border: 1px solid black;
+}
+
