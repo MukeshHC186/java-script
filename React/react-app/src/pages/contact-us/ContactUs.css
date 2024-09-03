@@ -59,4 +59,22 @@ h1{
     color: white;
     border-radius: 20%;
 }
+.select_gender_parent{
+    border: 1px solid red;
+    display: flex;
+    gap: 1rem;
+    place-content: center;
+    /* width: 100%; */
+}
+.select_gender{
+    
+    border: 1px solid rgb(26, 23, 23);
+    display: flex;
+    /* gap: 10px; */
+    place-content: center;
+    /* width: 10%; */
+}
+.select_gender input{
+    border: 1px solid red;
+}
 
