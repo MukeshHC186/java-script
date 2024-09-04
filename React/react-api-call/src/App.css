@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+.table{
+  width: 70%;
+  margin: 40px auto;
+}
+.table tr,td,th{
+  border: 1px solid #d4cece;
+}
