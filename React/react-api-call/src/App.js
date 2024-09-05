@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import './App.css';
+import GridTable from './common/grid-table/GridTable';
 
 const tableHeader = [
   {
@@ -42,7 +43,9 @@ const tableHeader = [
 function App() {
   const [showData, setShowData] =useState(false)
   const [tData, settData] = useState([])
+  const [loading, setLoading]= useState(false)
   const getPosts = ()=>{
+    setLoading(true)
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(resp => resp.json())
     .then(json => {
@@ -50,6 +53,9 @@ function App() {
       settData(json)
     })
     .catch((error) =>console.log(error))
+    .finally(()=>{
+      setLoading(false)
+    })
   }
 
   const displayData = (tr,th) =>{
@@ -71,21 +77,13 @@ function App() {
   return (
     <div className="App">
        <button onClick={()=>setShowData(true)}>show</button>
-       <div>
-           <table className='table'>
-            <thead>
-              <tr>
-                {tableHeader.map(el=> <th key={el?.id}>{el?.label}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {tData.map(tr => <tr key={tr.id}>
-                {tableHeader.map((th => <td key={`${tr.id}-${th.id}`}>{displayData(tr,th)}</td>))}
-               </tr>)}
-            </tbody>
-           </table>
+       
+      {!!tData?.length ? <GridTable tHeader={tableHeader} data={tData} displaycd={displayData}/>
+      :showData  ? loading ?<div>Loading...</div> : <div>Not data to display</div>
+      :null}
+        
        </div>
-    </div>
+   
   );
 }
 
