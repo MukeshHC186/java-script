@@ -1,0 +1,7 @@
+.main_container{
+    display: grid;
+    grid-template-areas: auto auto auto;
+    grid-template-rows: 50px auto auto;
+    height: 100vh;
+    border: 1px solid red;
+}
