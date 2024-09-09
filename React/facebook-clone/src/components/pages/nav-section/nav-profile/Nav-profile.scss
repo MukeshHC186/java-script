@@ -1,0 +1,14 @@
+.nav_profile{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    place-items: center;
+    &  .btn:hover,.user:hover{
+      color: rgb(115, 188, 218);
+      cursor: pointer;
+    }
+    & p{
+      margin-left: -40px;
+      font-size: 15px;
+    }
+}

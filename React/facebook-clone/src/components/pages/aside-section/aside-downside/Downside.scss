@@ -1,0 +1,56 @@
+.downside_div{
+    // border: 1px solid black;
+    height: 50%;
+    background-color: rgb(228, 232, 236);
+    & .downside_child{
+      display: flex;
+    //   justify-content: space-around;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      // border: 1px solid red;
+      gap: 10px;
+      
+    }
+    & .downside_heading{
+      display: flex;
+      align-items: center;
+      // border: 1px solid red;
+      justify-content: space-between;
+      padding: 20px;
+      height: 20px;
+      color: gray;
+    }
+    & .more_logo{
+       font-size: 30px;
+    }
+    
+    & .downside_name{
+      font-weight: bold;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  & .downside_img{
+    // border: 1px solid red;
+    // padding: 20px;
+    border-radius: 20%;
+    width: 40px;
+  
+  }
+  
+  
+  & .btn_div{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  & .downside_btn{
+    width: 70%;
+    margin: auto;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(203, 211, 218);
+    font-weight: bold;
+  }
+    
+  }

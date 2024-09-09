@@ -1,0 +1,40 @@
+.upside_div{
+    // border: 1px solid black;
+    height: 50%;
+    background-color: rgb(228, 232, 236);
+    & .upside_child{
+      display: flex;
+    //   justify-content: space-around;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      // border: 1px solid red;
+      gap: 10px;
+      
+    }
+    & .upside_logo{
+      // border: 1px solid red;
+      font-size: 30px;
+      color: rgb(51, 154, 237);
+    }
+    & .upside_name{
+          font-weight: bold;
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    & .btn_div{
+      width: 90%;
+      margin: auto;
+      text-align: center;
+    }
+    & .upside_btn{
+      width: 70%;
+      margin: auto;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgb(203, 211, 218);
+      font-weight: bold;
+    }
+    
+
+}

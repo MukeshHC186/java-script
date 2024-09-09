@@ -1,7 +1,30 @@
 .main_container{
     display: grid;
-    grid-template-areas: auto auto auto;
-    grid-template-rows: 50px auto auto;
+    grid-template-columns: 400px auto auto;
+    grid-template-rows: 60px auto ;
+    grid-template-areas: "nav nav nav" 
+                         "aside main main";
     height: 100vh;
-    border: 1px solid red;
+    // border: 1px solid red;
+    & nav{
+        grid-area: nav;
+        // border: 1px solid;
+    }
+    & aside{
+        grid-area: aside;
+        // border: 1px solid;
+    }
+    & main{
+        grid-area: main;
+        border: 1px solid;
+        display: flex;
+        & .main_lift{
+            width: 68%;
+        border: 1px solid;
+        }
+        & .main_right{
+            width: 32%;
+        border: 1px solid;
+        }
+    }
 }

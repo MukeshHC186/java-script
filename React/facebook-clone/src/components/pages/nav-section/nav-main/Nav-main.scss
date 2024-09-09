@@ -1,0 +1,16 @@
+.nav_main{
+    & .nav_ul{
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        &li:hover{
+            color: rgb(115, 188, 218);
+            cursor: pointer;
+        }
+        & li{
+            list-style: none;
+        }
+        
+    }
+    
+}

@@ -1,0 +1,28 @@
+.nav_search {
+    display: flex;
+    gap: 10px;
+    & img{
+        width: 30px;
+        height: 30px;
+    }
+    & input{
+        border: none;
+        width: 90%;
+        background: transparent;
+        border-radius: 8px;
+        padding: 5px;
+        // border: 1px solid ;
+
+    }
+    & input:focus{
+        outline: none;
+    }
+    & .search_logo{
+        box-shadow: rgba(196, 192, 192, 0.24) 0px 3px 8px;
+        width: 70%;
+        padding: 3px;
+        height: 25px;
+        border-radius: 10px;
+        background-color: rgb(230, 232, 233);
+    }
+}
