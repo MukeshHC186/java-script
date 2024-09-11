@@ -1,0 +1,206 @@
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+   .fd-title {
+    display: flex;
+    font-weight: 500;
+    margin: 5px 20px 0 15px;
+    color: rgb(128, 125, 125);
+    justify-content: space-between;
+  }
+   .fd-title p {
+    color: blue;
+  }
+
+  .fd-request {
+    width: 94%; // Adjust as needed
+    border-radius: 8px;
+    // background-color:white;
+    padding: 10px;
+    margin-top: 0px;
+    margin: auto;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    &:hover {
+      // border: 1px solid #ddd;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+    .pro-div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .user-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .fd-name {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        .fd-head {
+          display: block;
+          position: relative;
+
+          h4 {
+            font-size: 16px;
+            margin: 0;
+          }
+
+          p {
+            font-size: 15px;
+            color: #87878d;
+            margin: 1px;
+            // margin-left: 8px;
+            .mut-img,
+            .mut-img1 {
+              width: 20px;
+              height: 20px;
+              margin: 0 20px 0 0;
+              border-radius: 50%;
+              border: 2px solid white;
+            }
+            .mut-img {
+              position: absolute;
+              left: 19px;
+              z-index: 5;
+              bottom: 2px;
+            }
+          }
+        }
+
+        p {
+          font-size: 13px;
+          color: rgb(8, 8, 223);
+          display: flex;
+          // align-items: center;
+          margin: 4px 0 0;
+          .p-icon {
+            font-size: 16px;
+            margin: 1.5px 0 0 0;
+          }
+        }
+      }
+    }
+
+    .btn-div {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0 0 45px;
+
+      .conf-btn,
+      .can-btn {
+        padding: 10px 12px;
+        width: 40%;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .conf-btn {
+        background-color: rgb(92, 92, 241);
+        color: white;
+      }
+
+      .can-btn {
+        background-color: #d7d9db;
+        color: rgb(11, 11, 11);
+      }
+    }
+  }
+  hr {
+    border: 1px solid rgb(222, 218, 218);
+    margin: 15px;
+  }
+  .birth-div {
+    margin-top: 0;
+    & h4 {
+      font-weight: 500;
+      margin: 0 0 0 18px;
+      color: rgb(118, 118, 118);
+    }
+
+    .birth-detail {
+      margin: 15px;
+      display: flex;
+      justify-content: start;
+      color: rgb(77, 75, 75);
+      img {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+      }
+      b {
+        font-weight: 500;
+        color: #292828;
+      }
+      p {
+        margin: 0 0 0 15px;
+      }
+    }
+    .birth-detail:hover {
+      background-color: rgb(218, 223, 229);
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  }
+  .contact-head {
+    margin-top: 0;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    & h4 {
+      font-weight: 500;
+      margin: 0 0 0 15px;
+      color: rgb(118, 118, 118);
+    }
+    .fd-icon {
+      display: flex;
+      gap: 30px;
+      color: rgb(118, 118, 118);
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0 20px 0 0;
+    }
+  }
+  .contact-div {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    & li {
+      display: flex;
+      margin: 0 0 0 15px;
+      justify-content: start;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    & li:hover {
+      background-color: rgb(218, 223, 229);
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    & img {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      border-radius: 50%;
+    }
+    & p {
+      margin: 10px;
+    }
+    .status {
+      color: rgb(5, 189, 5);
+      font-size: 9px;
+      margin: 24px 0 0 -12px;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+  }
