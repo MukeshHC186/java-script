@@ -4,24 +4,21 @@
     grid-template-rows: 60px auto ;
     grid-template-areas: "nav nav nav" 
                          "aside main main";
-    // height: 100vh;
-    // border: 1px solid red;
+   
     & nav{
         grid-area: nav;
         z-index: 1;
         position: sticky;
         top: 0px;
-        // border: 1px solid;
+        
     }
     & aside{
         grid-area: aside;
-        // height: 100vh;
-        // position: fixed;
-        // border: 1px solid;
+       
     }
     & main{
         grid-area: main;
-        // border: 1px solid;
+        height: 100vh;
         display: flex;
         & .main_lift{
             width: 68%;
@@ -30,7 +27,6 @@
         & .main_right{
             width: 32%;
     background-color: rgb(228, 232, 236);
-            // height: 100vh;
         }
     }
 }
