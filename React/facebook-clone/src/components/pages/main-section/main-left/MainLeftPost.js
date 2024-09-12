@@ -171,7 +171,7 @@ return(
             </div></div>
             <div className="post-img">
                 <span>{el.line}</span> <br/>
-                <video width="653" height="" controls autoPlay muted loop>
+                <video className='postVedio' width="653" height="" controls autoPlay muted loop>
             <source src={el.post} type="video/mp4" />
             Your browser does not support HTML video.
           </video>
