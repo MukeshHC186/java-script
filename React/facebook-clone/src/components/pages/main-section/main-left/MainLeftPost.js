@@ -9,13 +9,13 @@ import { RiShareForwardLine } from "react-icons/ri";
 const mainContain=[
     {
         username:"Manish Yadav",
-        userpic:"https://scontent.fjai1-2.fna.fbcdn.net/v/t39.30808-1/450611951_2171870229856890_3184289842668234936_n.jpg?stp=dst-jpg_s480x480&_nc_cat=104&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=xGHdB7jQtugQ7kNvgFGtq9c&_nc_ht=scontent.fjai1-2.fna&oh=00_AYA7wTZ_AfJpG3JB50GSpGOwrHst4NDX6HFivDZz3Tkvcg&oe=66DF4C99",
+        userpic:"https://avatars.githubusercontent.com/u/158014471?v=4",
         more:<FiMoreHorizontal />,
         time:"1 hrs",
         icon:<FaUserFriends />,
         postType:"image",
         line:"लड़खड़ा रहे हैं  संभल रहे हैं तजुर्बे हैं..................हो रहे हैं।",
-        post:"https://media-bom1-2.cdn.whatsapp.net/v/t61.24694-24/459011293_870001228046178_270215879979982060_n.jpg?ccb=11-4&oh=01_Q5AaIObxI0bk369qokp_BfZXUvGzGs2ovohnbyndhFfV-ALx&oe=66ED2CDE&_nc_sid=5e03e0&_nc_cat=103",
+        post:"https://avatars.githubusercontent.com/u/158014471?v=4",
         like:<AiOutlineLike />,
         comment:<FaRegComment />,
         sent:<FaWhatsapp />,
@@ -79,7 +79,7 @@ const mainContain=[
     },
     {
         username:"Suresh Kumar",
-        userpic:"https://pics.craiyon.com/2023-11-26/oMNPpACzTtO5OVERUZwh3Q.webp",
+        userpic:"https://avatars.githubusercontent.com/u/158014471?v=4",
         more:<FiMoreHorizontal />,
         time:"3 hrs",
         icon:<FaUserFriends />,

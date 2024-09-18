@@ -13,7 +13,7 @@ const contact = [
   {
     id: "kamlesh",
     name: "Manish Yadav",
-    image: "https://scontent.fjai1-2.fna.fbcdn.net/v/t39.30808-1/450611951_2171870229856890_3184289842668234936_n.jpg?stp=dst-jpg_s480x480&_nc_cat=104&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=xGHdB7jQtugQ7kNvgFGtq9c&_nc_ht=scontent.fjai1-2.fna&oh=00_AYA7wTZ_AfJpG3JB50GSpGOwrHst4NDX6HFivDZz3Tkvcg&oe=66DF4C99",
+    image: "https://avatars.githubusercontent.com/u/158014471?v=4",
     status: "online",
     
   },
@@ -31,15 +31,15 @@ const contact = [
   },
   {
     id: "manoj",
-    name: "Sahrrukh Khan",
+    name: "Mukesh Kumar Jat",
     status: "online",
-    image: "https://media-bom1-2.cdn.whatsapp.net/v/t61.24694-24/414725898_450724871107729_7800877498851362272_n.jpg?ccb=11-4&oh=01_Q5AaIEMAKxFCaIBlujOMti9L6V3Yqg4qXuHxP7oelEGcHlVw&oe=66E423E9&_nc_sid=5e03e0&_nc_cat=105",
+    image: "https://avatars.githubusercontent.com/u/158014471?v=4",
   },
   {
     id: "Mahesh",
     name: "Kaitrina Kaif",
     status: "online",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7iFts_aPEkkYJE5JKYMqQAQTrfSVzT28rSg&s",
+    image: "https://avatars.githubusercontent.com/u/158014471?v=4",
   },
   {
     id: "sitaram",
@@ -63,7 +63,7 @@ const contact = [
     id: "manish",
     name: "Madhuri Dixit",
     status: "offline",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7iFts_aPEkkYJE5JKYMqQAQTrfSVzT28rSg&s",
+    image: "https://avatars.githubusercontent.com/u/158014471?v=4",
   },
   {
     id: "ayush",
