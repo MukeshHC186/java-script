@@ -1,26 +1,68 @@
 .aside{
     display: grid;
+    padding: .3rem;
     grid-area: aside;
   border: 1px solid rgb(10, 26, 39);
   & .logo_div{
-    font-size: 30px;
+    font-size: 22px;
     display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    // border-radius: 50%;
-    // width: 20%;
-    border: 1px solid red;
-    // padding: 5px;
-    & p{
-        font-size: 18px;
+    border-radius: 50px;
+    & .btn1{
+      padding: 10px 20px 10px 10px;
+      display: flex;
+      gap: 1rem;
+      place-items: center;
+      width: auto;
+      border-radius: 50px;
+      border: none;
     }
-    & .btn{
-    border: 1px solid red;
-        font-size: 15px;
-        border-radius: 20%;
-        width: 80%;
-        margin: auto;
-        background-color: rgb(29,155,240);
-    }
+    
   }
+  & .logo_div button:hover{
+    background-color: rgba(63, 72, 80, 0.589);
+  }
+  & .btn {
+    // border: 1px solid red;
+        font-size: 15px;
+        border-radius: 50px;
+        font-size: 20px;
+        color: rgb(231,233,234);
+        width: 70%;
+        padding: .4rem;
+        // margin: auto;
+        background-color: rgb(29,155,240);
+        transition: all ease-in-out .6s;
+    }
+    & .btn:hover{
+      background-color: rgba(52, 162, 236, 0.74);
+    }
+    & .logo_div1{
+      font-size: 22px;
+    display: flex;
+    & .btn1{
+      padding: 10px 20px 10px 10px;
+      display: flex;
+      gap: 1rem;
+      place-items: center;
+      border-radius: 50px;
+      border: none;
+    }
+    & .dropdown-menu{
+      background: transparent;
+      border: 1px solid rgba(248, 243, 243, 0.37);
+      font-size: 22px;
+      // padding: 16px;
+      width: 100%;
+      & .dropdown-item{
+        color: rgb(231,233,234);
+        transition: all ease-in-out .4s;
+      }
+      & .dropdown-item:hover{
+        background-color: rgba(63, 72, 80, 0.589);
+        }
+    }
+    }
+    & .logo_div1 button:hover{
+      background-color: rgba(63, 72, 80, 0.589);
+    }
 }

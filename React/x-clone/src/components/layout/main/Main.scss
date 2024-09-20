@@ -2,4 +2,39 @@
     display: grid;
     grid-area: main;
   border: 1px solid rgb(10, 26, 39);
+  & .Main_foryou{
+    // height: 7%;
+    display: flex;
+    place-items: center;
+    & span{
+      border: 1px solid rgb(10, 26, 39);
+      padding: 1rem;
+      width: 50%;
+      text-align: center;
+      font-weight: bold;
+      transition:all ease-in-out .4s ;
+    }
+    & span:hover{
+    background-color: rgba(63, 72, 80, 0.589);
+    }
+  }
+  & .Main_whathappen{
+    // height: 17%;
+    border: 1px solid rgb(10, 26, 39);
+    padding: .5rem;
+    & input{
+      padding: .3rem;
+      margin-left: 10px;
+      width: 40%;
+      border: none;
+      font-size: 20px;
+    }
+    & input:focus{
+      outline: none;
+    }
+    & .who_reply{
+      color: rgb(29,155,240);
+      margin-left: 60px;
+    }
+  }
 }
