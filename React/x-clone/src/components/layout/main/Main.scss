@@ -1,4 +1,5 @@
 .Main{
+  color: rgb(231,233,234);
     display: grid;
     grid-area: main;
   border: 1px solid rgb(10, 26, 39);
@@ -20,12 +21,14 @@
   }
   & .Main_whathappen{
     // height: 17%;
+    justify-content: space-between;
+    width: 100%;
     border: 1px solid rgb(10, 26, 39);
     padding: .5rem;
     & input{
       padding: .3rem;
       margin-left: 10px;
-      width: 40%;
+      width: 90%;
       border: none;
       font-size: 20px;
     }
@@ -34,7 +37,10 @@
     }
     & .who_reply{
       color: rgb(29,155,240);
-      margin-left: 60px;
+      margin-left: 20px;
+    }
+    & .formatting_icon_main{
+      width: 90%;
     }
   }
 }

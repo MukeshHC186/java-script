@@ -24,6 +24,8 @@
         & .main_lift{
             width: 68%;
            overflow: scroll;
+           scrollbar-width:none;
+           
         }
         & .main_right{
             width: 32%;
