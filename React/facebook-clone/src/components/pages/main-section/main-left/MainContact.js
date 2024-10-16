@@ -8,7 +8,7 @@ const contact = [
     id: "ashok",
     status:"online",
     name: "Sohan Lal Jat",
-    image: "https://sharedp.com/wp-content/uploads/2024/05/whatsapp-dp-for-boys-love-1024x1024.jpg",
+    image: "https://avatars.githubusercontent.com/u/158014471?s=400&u=5f9fe018b389c1935f6b461ef054574dd75472a4&v=4",
   },
   {
     id: "kamlesh",
@@ -86,7 +86,7 @@ const contact = [
   {
     id: "prachi",
     status:"online",
-    name: "Prachi",
+    name: "Monika",
     image: "https://cdn4.sharechat.com/img_1599842794_194217_9001cdd_1663260840440_sc.jpg?tenant=sc&referrer=feed-service&f=440_sc.jpg",
   },
 ];
@@ -100,7 +100,7 @@ const MainContact = () => {
       <div className="fd-request">
         <div className="pro-div">
           <img
-            src="https://media-bom1-2.cdn.whatsapp.net/v/t61.24694-24/445380714_380164061741682_5938289116210842685_n.jpg?ccb=11-4&oh=01_Q5AaIDDNdtkdydGNodmgmCvGi4eVSufZWTburveYfejSged0&oe=66ED6391&_nc_sid=5e03e0&_nc_cat=104"
+            src="https://lh3.googleusercontent.com/a/ACg8ocIlOpseVu54w7ra2XEus4jSg0jB3slG61m5r5V2B9HIghmF7Yk=s432-c-no"
             alt="fd"
             className="user-img"
           />

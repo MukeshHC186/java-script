@@ -16,7 +16,7 @@ const chats={
             message:"Hello, how are you?",
             time:"10:00",
             status:"online",
-            image:"https://media-del1-1.cdn.whatsapp.net/v/t61.24694-24/420474561_1440305299910829_7198873562190225004_n.jpg?ccb=11-4&oh=01_Q5AaIMd2ee7AfAGn23io0CIc82U-ZZ9jccMSto6XG9XbnQQ5&oe=66E2775F&_nc_sid=5e03e0&_nc_cat=110",
+            image:"https://media-pnq1-2.cdn.whatsapp.net/v/t61.24694-24/454030578_293233067179803_8152556052602047769_n.jpg?ccb=11-4&oh=01_Q5AaIL7RVBg8mXFdLZsOHRUrVdCp8mGsrilhPu4Uy5O8V4k7&oe=670E1F44&_nc_sid=5e03e0&_nc_cat=111",
         },
         {
             id:2,
@@ -24,7 +24,7 @@ const chats={
             message:"Sab Badiya",
             time:"12:05",
             status:"offline",
-            image:"https://media-del1-1.cdn.whatsapp.net/v/t61.24694-24/424425449_7049128058457836_8756089193715234667_n.jpg?ccb=11-4&oh=01_Q5AaIBSpDbGSPcWtrvtkpDHrdlNjkE0ZoGsp2zXlvYxGpGO0&oe=66E2A790&_nc_sid=5e03e0&_nc_cat=101"
+            image:"https://media-pnq1-2.cdn.whatsapp.net/v/t61.24694-24/437511276_3720613904928079_8471831409051485831_n.jpg?ccb=11-4&oh=01_Q5AaIGyh6lc_rZvWUNXWFaXU_VVNbr9g6fsM0uoPKU4ahuKt&oe=670E3778&_nc_sid=5e03e0&_nc_cat=100"
         },
         {
             id:3,

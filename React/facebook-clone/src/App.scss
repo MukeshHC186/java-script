@@ -4,10 +4,10 @@
     grid-template-rows: 80px auto ;
     grid-template-areas: "nav nav nav" 
                          "aside main main";
-   
+    //  height: 100vh;
     & nav{
         grid-area: nav;
-        z-index: 1;
+        z-index: 2;
         overflow: hidden;
         position: sticky;
         top: 0px;
@@ -15,11 +15,11 @@
     }
     & aside{
         grid-area: aside;
-       
+    //    height: 100vh;
     }
     & main{
         grid-area: main;
-        height: 100vh;
+        // height: auto;
         display: flex;
         & .main_lift{
             width: 68%;
@@ -29,6 +29,7 @@
         }
         & .main_right{
             width: 32%;
+            // height: 100vh;
     background-color: rgb(228, 232, 236);
         }
     }

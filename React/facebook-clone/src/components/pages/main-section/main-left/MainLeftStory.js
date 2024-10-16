@@ -2,19 +2,19 @@ import './main-story-cont.scss'
 const storyData = [
     {
       username: "Add your story",
-      userprofilepic:"https://avatars.githubusercontent.com/u/158014471?v=4",
+      userprofilepic:"https://avatars.githubusercontent.com/u/158014471?s=400&u=5f9fe018b389c1935f6b461ef054574dd75472a4&v=4",
       storytype: "vedio",
       storyurl:"https://videos.pexels.com/video-files/5896379/5896379-uhd_1440_2560_24fps.mp4",
     },
     {
       username: "Mukesh Kumar Jat",
-      userprofilepic:"https://media-bom1-2.cdn.whatsapp.net/v/t61.24694-24/394193721_2754504514705525_5478513650949897062_n.jpg?ccb=11-4&oh=01_Q5AaIBGZpdSK8nIkYE1fXSNJrq8eyxqFLHTlXJMr4N2cGCWI&oe=66EBABAE&_nc_sid=5e03e0&_nc_cat=102",
+      userprofilepic:"https://avatars.githubusercontent.com/u/158014471?s=400&u=5f9fe018b389c1935f6b461ef054574dd75472a4&v=4",
       storytype: "video",
       storyurl: "https://cdn.pixabay.com/video/2024/03/31/206294_large.mp4",
     },
     {
       username: "Jitu kumar",
-      userprofilepic:"blob:https://web.whatsapp.com/0e9bd22c-eef0-4137-86df-16d6e86a8602",
+      userprofilepic:"https://avatars.githubusercontent.com/u/158014471?s=400&u=5f9fe018b389c1935f6b461ef054574dd75472a4&v=4",
       storytype: "image",
       storyurl: "https://e1.pxfuel.com/desktop-wallpaper/938/413/desktop-wallpaper-50-romantic-love-couple-with-quotes-for-whatsapp-dp-profile-pic-stylish-couple.jpg",
     },
